@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="signin">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in — Inbound Select</title>
+<meta name="description" content="Sign in to Inbound Select: the agency console, or the agent's call screen.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-signin.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main" class="si">
+
+  <div class="si__side">
+    <div class="si__card" id="siCard">
+
+      <div class="seg" id="siSeg" role="tablist" aria-label="Sign in as" data-role="agency">
+        <button type="button" class="seg__b" role="tab" id="tabAgency" aria-selected="true" aria-controls="siForm" data-role="agency">Agency</button>
+        <button type="button" class="seg__b" role="tab" id="tabAgent" aria-selected="false" aria-controls="siForm" tabindex="-1" data-role="agent">Agent</button>
+        <i class="seg__ind" aria-hidden="true"></i>
+      </div>
+
+      <h1 class="display si__t" data-split="hero">Sign in to <br><em class="accent" id="siWhat">your console.</em></h1>
+      <p class="si__l" id="siLede" data-hero>Routing, agents, numbers and billing for your agency.</p>
+
+      <form class="si__form" id="siForm" role="tabpanel" aria-labelledby="tabAgency" novalidate>
+        <div class="field" data-hero>
+          <label for="siEmail">Email</label>
+          <input class="input" id="siEmail" name="email" type="email" autocomplete="username" inputmode="email" placeholder="you@youragency.com">
+        </div>
+        <div class="field" data-hero>
+          <div class="si__row">
+            <label for="siPw">Password</label>
+            <a href="#" class="si__forgot link-u" id="siForgot" aria-controls="siNote" aria-expanded="false">Forgot password?</a>
+          </div>
+          <div class="si__pw">
+            <input class="input" id="siPw" name="password" type="password" autocomplete="current-password" placeholder="Your password">
+            <button type="button" class="si__show" id="siShow" aria-controls="siPw" aria-pressed="false">Show</button>
+          </div>
+          <p class="si__note" id="siNote"><span>Prototype: no reset email is sent. Any email and password will sign you in.</span></p>
+        </div>
+        <button type="submit" class="btn si__btn" id="siBtn" data-hero>
+          <span class="si__btn-a">Sign in <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          <span class="si__btn-b" aria-hidden="true"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span>Signing you in…</span>
+        </button>
+      </form>
+
+      <div class="si__alt" data-hero>
+        <p>New agency? <a href="demo.html" class="link-u">Book a demo</a></p>
+        <p>Agent? Ask your agency for an invite link.</p>
+      </div>
+
+      <a href="app.html" id="siGo" hidden tabindex="-1" aria-hidden="true"></a>
+    </div>
+  </div>
+
+  <figure class="si__photo" data-hero-media>
+    <img src="assets/img/photos/agent-3.jpg" alt="An agent at her desk, taking a call on the office phone">
+    <figcaption class="si__tk" id="siTk" aria-label="Sample: three calls ringing, routing on">
+      <header class="si__tk-h">
+        <span class="si__tk-s"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><b>3 calls ringing</b></span>
+        <span class="si__tk-live"><span class="live-dot"></span>Routing on</span>
+      </header>
+      <ul class="si__q">
+        <li><span class="st">FL</span><span class="si__q-c">Tampa <span>Final expense</span></span><span class="mono si__q-t" data-s="14">0:14</span></li>
+        <li><span class="st">OH</span><span class="si__q-c">Columbus <span>Medicare</span></span><span class="mono si__q-t" data-s="9">0:09</span></li>
+        <li><span class="st">AZ</span><span class="si__q-c">Phoenix <span>Final expense</span></span><span class="mono si__q-t" data-s="3">0:03</span></li>
+      </ul>
+      <p class="si__tk-f">Sample · each offered to licensed agents for 40s</p>
+    </figcaption>
+  </figure>
+
+</main>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-signin.js"></script>
+</body>
+</html>

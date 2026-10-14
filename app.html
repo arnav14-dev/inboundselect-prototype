@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inbound Select — Agency console</title>
+<meta name="description" content="Inbound Select agency console prototype. All figures are sample data.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+/* Arrival from the website: the same dark curtain lifts off the console */
+.app-curtain { position: fixed; inset: 0; z-index: 999; background: #F4F2ED; box-shadow: inset 0 1px 0 #D9D5CC; clip-path: inset(0 0 0 0); pointer-events: none; transition: clip-path .6s cubic-bezier(.65,0,.35,1); }
+.app-curtain.is-up { clip-path: inset(0 0 100% 0); }
+</style>
+<script>
+(function (d) {
+  try {
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (sessionStorage.getItem('ib-nav') === '1') { sessionStorage.removeItem('ib-nav'); if (!reduce) d.classList.add('ib-arrive'); }
+    // Links back to the website get the website's curtain-lift entrance
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (a && /\.html(#.*)?$/.test(a.getAttribute('href')) && !/^app\.html/.test(a.getAttribute('href'))) sessionStorage.setItem('ib-nav', '1');
+    }, true);
+  } catch (e) {}
+})(document.documentElement);
+</script>
+</head>
+<body class="app">
+<script>
+if (document.documentElement.classList.contains('ib-arrive')) {
+  document.write('<div class="app-curtain" id="appCurtain" aria-hidden="true"></div>');
+  addEventListener('DOMContentLoaded', function () {
+    var c = document.getElementById('appCurtain');
+    setTimeout(function () { c.classList.add('is-up'); c.addEventListener('transitionend', function () { c.remove(); }, { once: true }); }, 60);
+  });
+}
+</script>
+
+<div class="shell" id="shell">
+  <!-- Sidebar -->
+  <aside class="sb" id="sb" aria-label="Main">
+    <a class="sb-logo" href="index.html" aria-label="Inbound Select website" title="Inbound Select website"><span data-logo="full"></span></a>
+
+    <button class="sb-org" type="button" id="org-btn" aria-label="Agency">
+      <span class="org-mono">LS</span>
+      <span class="org-name">Lakeshore Senior Benefits</span>
+      <span class="org-chev" data-ic="updown"></span>
+    </button>
+
+    <nav class="nav" id="nav"></nav>
+
+    <div class="sb-sec">
+      <button class="sb-agent" type="button" data-go="#/agent">
+        <span data-ic="headset"></span>
+        <span>Switch to agent view</span>
+        <span class="sb-agent-arr" data-ic="arrow-right"></span>
+      </button>
+    </div>
+
+    <div class="sb-foot">
+      <div class="me">
+        <span class="av" style="--s:28px">RM</span>
+        <span class="me-t"><b>Rachel Moreno</b><span>Owner</span></span>
+      </div>
+      <span class="sample">Sample data</span>
+    </div>
+  </aside>
+
+  <!-- Main sheet -->
+  <main class="sheet" id="sheet">
+    <header class="tb">
+      <button class="tb-menu" type="button" id="menu-btn" aria-label="Open menu"><span data-ic="menu"></span></button>
+      <a class="tb-mark" href="index.html" aria-label="Inbound Select website"><span data-logo="mark"></span></a>
+      <div class="crumb" id="crumb"><span class="crumb-org">Lakeshore Senior Benefits</span><span class="crumb-sep" data-ic="chevron-right"></span><b id="crumb-page">Overview</b></div>
+      <div class="tb-right">
+        <span class="chip chip--date"><span data-ic="calendar"></span>Today</span>
+        <button class="chip chip--search" type="button" id="search-btn" aria-label="Search (Command K)">
+          <span data-ic="search"></span><span class="chip-ph">Search</span><span class="kbd">⌘K</span>
+        </button>
+        <div class="routing" id="routing">
+          <button class="chip chip--live" type="button" id="routing-btn" aria-haspopup="dialog" aria-expanded="false">
+            <span class="live-dot"></span><span class="routing-label">Routing on</span>
+          </button>
+          <div class="pop" id="routing-pop" role="dialog" aria-label="Routing" hidden></div>
+        </div>
+      </div>
+    </header>
+    <div class="scroller" id="scroller">
+      <div class="view" id="view"></div>
+    </div>
+  </main>
+</div>
+
+<!-- Mobile menu sheet -->
+<div class="msheet" id="msheet" aria-hidden="true">
+  <div class="msheet-scrim" data-close-menu></div>
+  <div class="msheet-panel">
+    <div class="msheet-head">
+      <a href="index.html" aria-label="Inbound Select website" style="display:inline-flex"><span data-logo="full" style="width:120px"></span></a>
+      <button class="icon-btn" type="button" data-close-menu aria-label="Close menu"><span data-ic="x"></span></button>
+    </div>
+    <div class="msheet-org"><span class="org-mono">LS</span><span>Lakeshore Senior Benefits</span></div>
+    <nav class="nav nav--m" id="mnav"></nav>
+    <button class="sb-agent" type="button" data-go="#/agent"><span data-ic="headset"></span><span>Switch to agent view</span><span class="sb-agent-arr" data-ic="arrow-right"></span></button>
+    <div class="msheet-foot"><span class="av" style="--s:26px">RM</span><span>Rachel Moreno · Owner</span><span class="sample">Sample data</span></div>
+  </div>
+</div>
+
+<!-- Agent console (Dana Whitfield) -->
+<div class="agentv" id="agentv" aria-label="Agent view"></div>
+
+<!-- Drawer -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" tabindex="-1"></aside>
+
+<!-- Modal + palette + toasts -->
+<div class="modal-root" id="modal-root"></div>
+<div class="pal" id="pal" aria-hidden="true">
+  <div class="pal-scrim" data-close-pal></div>
+  <div class="pal-box" role="dialog" aria-label="Command menu">
+    <div class="pal-in"><span data-ic="search"></span><input id="pal-input" type="text" placeholder="Jump to a page, call or agent…" autocomplete="off" spellcheck="false"><span class="kbd">esc</span></div>
+    <div class="pal-list" id="pal-list" role="listbox"></div>
+    <div class="pal-f"><span><span class="kbd">↑</span><span class="kbd">↓</span> move</span><span><span class="kbd">↵</span> open</span></div>
+  </div>
+</div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/js/brand.js"></script>
+<script src="assets/js/app-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

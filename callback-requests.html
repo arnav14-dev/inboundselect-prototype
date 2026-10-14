@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="callbacks">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Callback Requests — Inbound Select</title>
+<meta name="description" content="When no licensed agent is free within 40 seconds, the caller can leave a voicemail. It becomes a Callback Request your agents can take, and the sale stays inside your agency.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-callbacks.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Hero: the board is the hero media ============ -->
+  <section class="phero cb-hero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div class="cb-hero__head">
+          <p class="eyebrow" data-hero>Callback Requests</p>
+          <h1 class="display phero__title" data-split="hero">They left a message. <br><em class="accent">Someone should hear it.</em></h1>
+        </div>
+        <p class="lede phero__lede" data-hero>When a call comes in and no licensed agent is free within 40 seconds, the caller can leave a voicemail. It becomes a Callback Request your agents can pick up, and the sale stays inside your agency.</p>
+        <div class="phero__actions" data-hero>
+          <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <a href="app.html" class="btn btn--ghost">See the product</a>
+        </div>
+      </div>
+
+      <div class="phero__media cb-board" id="board" data-hero-media>
+        <div class="stage-panel dots board-stage">
+          <div class="board">
+            <div class="board__bar">
+              <span data-logo="mark" class="board__mark"></span>
+              <span class="board__crumb"><span class="board__org">Lakeshore Senior Benefits <i>/</i></span> <b>Callback Requests</b></span>
+              <span class="board__count mono" id="boardCount" aria-live="polite">6 listings</span>
+            </div>
+
+            <div class="board__filters">
+              <div class="chips" role="group" aria-label="Filter by age">
+                <button class="chip" data-f-age="all" aria-pressed="true">All</button>
+                <button class="chip" data-f-age="0-7" aria-pressed="false">0–7 days</button>
+                <button class="chip" data-f-age="8-30" aria-pressed="false">8–30 days</button>
+              </div>
+              <div class="chips board__prod" role="group" aria-label="Filter by product">
+                <button class="chip" data-f-prod="fe" aria-pressed="false">Final expense</button>
+                <button class="chip" data-f-prod="med" aria-pressed="false">Medicare</button>
+                <button class="chip" data-f-prod="life" aria-pressed="false">Life</button>
+              </div>
+            </div>
+
+            <ul class="lst-list" id="lstList">
+              <li class="lst" data-age="0-7" data-product="fe" data-len="31">
+                <div class="lst__who">
+                  <h3 class="lst__city">Mobile, AL <span class="st">AL</span></h3>
+                  <p class="lst__meta"><b>Final expense</b> · rang 10:14 am · today</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Mobile, AL"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:31</span>
+                </div>
+                <p class="lst__price"><b class="mono">$25.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Hello, I’m calling for my mother. She’s eighty-one, and she’d like something in place so the family isn’t left with the funeral costs. She’s here with me now. Please call us back when you can. Thank you.</span>”</blockquote></div></div>
+              </li>
+
+              <li class="lst" data-age="0-7" data-product="med" data-len="38">
+                <div class="lst__who">
+                  <h3 class="lst__city">Columbus, OH <span class="st">OH</span></h3>
+                  <p class="lst__meta"><b>Medicare</b> · rang 6:52 pm · 2 days ago</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Columbus, OH"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:38</span>
+                </div>
+                <p class="lst__price"><b class="mono">$25.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Hi, I saw your advert about Medicare plans. I turn sixty-five in March and I’m not sure where to start. I’ve had a few letters already, and none of them make much sense to me. Could someone call me back? Thank you.</span>”</blockquote></div></div>
+              </li>
+
+              <li class="lst" data-age="0-7" data-product="life" data-len="29">
+                <div class="lst__who">
+                  <h3 class="lst__city">Raleigh, NC <span class="st">NC</span></h3>
+                  <p class="lst__meta"><b>Life</b> · rang 8:31 pm · 4 days ago</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Raleigh, NC"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:29</span>
+                </div>
+                <p class="lst__price"><b class="mono">$25.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Hi there. We’ve just had our first baby, a little girl, and we realised we don’t have any life cover at all. We’d like to talk through what makes sense for a family like ours. Evenings are best. Thanks so much.</span>”</blockquote></div></div>
+              </li>
+
+              <li class="lst" data-age="8-30" data-product="med" data-len="24">
+                <div class="lst__who">
+                  <h3 class="lst__city">Phoenix, AZ <span class="st">AZ</span></h3>
+                  <p class="lst__meta"><b>Medicare</b> · rang 1:05 pm · 11 days ago</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Phoenix, AZ"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:24</span>
+                </div>
+                <p class="lst__price"><b class="mono">$15.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Hi, it’s Robert. My doctor has just left my plan’s network, and I’d like to look at my options. I work until five, so please call after five o’clock. Thank you.</span>”</blockquote></div></div>
+              </li>
+
+              <li class="lst" data-age="8-30" data-product="fe" data-len="33">
+                <div class="lst__who">
+                  <h3 class="lst__city">Knoxville, TN <span class="st">TN</span></h3>
+                  <p class="lst__meta"><b>Final expense</b> · rang 4:47 pm · 18 days ago</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Knoxville, TN"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:33</span>
+                </div>
+                <p class="lst__price"><b class="mono">$15.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Good afternoon. I’m seventy-four and I live on my own. I’d like to sort out my burial costs so my son doesn’t have to. Nothing complicated, just something I can manage each month. Please call me back.</span>”</blockquote></div></div>
+              </li>
+
+              <li class="lst" data-age="8-30" data-product="life" data-len="27">
+                <div class="lst__who">
+                  <h3 class="lst__city">Grand Rapids, MI <span class="st">MI</span></h3>
+                  <p class="lst__meta"><b>Life</b> · rang 11:22 am · 26 days ago</p>
+                </div>
+                <div class="lst__player">
+                  <button class="lst__play vm-play" aria-label="Play the voicemail from Grand Rapids, MI"><svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg><svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg></button>
+                  <span class="wave lst__wave" aria-hidden="true"></span>
+                  <span class="mono lst__len vm-time">0:27</span>
+                </div>
+                <p class="lst__price"><b class="mono">$15.00</b><span>with recording</span></p>
+                <button class="btn btn--sm btn--ghost lst__take" aria-pressed="false"><span class="lst__take-a">Take</span><span class="lst__take-b">Yours · call back</span></button>
+                <div class="lst__msg"><div><blockquote class="lst__quote">“<span class="lst__q">Hi, we’ve just bought our first house, and the bank mentioned life insurance. I’d like to understand how much cover we’d actually need. Mornings are easiest for me. Thank you.</span>”</blockquote></div></div>
+              </li>
+            </ul>
+            <p class="board__empty" id="boardEmpty" hidden>Nothing listed here right now.</p>
+
+            <div class="board__foot">
+              <span>Only agents at Lakeshore Senior Benefits can see this board.</span>
+              <span class="mono">Sample data</span>
+            </div>
+          </div>
+        </div>
+        <p class="cb-board__cap">Press play to hear a caller’s message. Take it, and it’s yours to call back.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · How a listing is born ============ -->
+  <section class="sec sec--flush born-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>How a listing <em>is born.</em></h2>
+        <p class="lede" data-reveal>From a call nobody could take to a conversation that can still become a sale.</p>
+      </div>
+
+      <div class="born">
+        <figure class="photo born__photo" data-photo><img src="assets/img/photos/caller-3.jpg" alt="An older woman on the phone at home, among her plants" loading="lazy"></figure>
+        <div class="rows born__rows" data-reveal-group>
+          <div class="row" data-reveal><span class="row__n">01</span><h3 class="row__t">Nobody free within 40&nbsp;seconds</h3><p class="row__d">The call was offered to every eligible agent at once. When none of them accepts inside the window, the caller isn’t left listening to a ringing line.</p></div>
+          <div class="row" data-reveal><span class="row__n">02</span><h3 class="row__t">The caller leaves a message</h3><p class="row__d">They say who they are, what they need and when to call. The message is recorded in full.</p></div>
+          <div class="row" data-reveal><span class="row__n">03</span><h3 class="row__t">It’s listed on your agency’s board</h3><p class="row__d">With the recording, the caller’s state, the product and the time they rang. Only your own agents can see it.</p></div>
+          <div class="row" data-reveal><span class="row__n">04</span><h3 class="row__t">An agent takes it and calls back</h3><p class="row__d">They listen first, take it at your agency’s price, then ring the caller back while the need is still fresh.</p></div>
+          <div class="row" data-reveal><span class="row__n">05</span><h3 class="row__t">It comes off the board at 90&nbsp;days</h3><p class="row__d">The price steps down as the message ages. After 90 days it is removed for good.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · Priced by how fresh it is ============ -->
+  <section class="sec sec--flush">
+    <div class="wrap split fresh">
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Pricing</p>
+        <h2 class="h2" data-split>Priced by how <br><em>fresh&nbsp;it&nbsp;is.</em></h2>
+        <p class="lede" data-reveal>A message from this morning is worth more than one from last month. Your agency sets a price for each age bracket, and every listing steps down on its own as it ages.</p>
+      </div>
+
+      <div class="ages" data-reveal-group>
+        <div class="ages__h" data-reveal><span>Age of the message</span><span>With recording</span><span>Without</span></div>
+        <div class="ages__r" data-reveal>
+          <span class="ages__age"><span class="sig ages__sig" data-lit="4" aria-hidden="true"><i></i><i></i><i></i><i></i></span>0–7 days</span>
+          <span class="ages__p mono">$25.00</span><span class="ages__p mono">$20.00</span>
+        </div>
+        <div class="ages__r" data-reveal>
+          <span class="ages__age"><span class="sig ages__sig" data-lit="3" aria-hidden="true"><i></i><i></i><i></i><i></i></span>8–30 days</span>
+          <span class="ages__p mono">$15.00</span><span class="ages__p mono">$12.00</span>
+        </div>
+        <div class="ages__r" data-reveal>
+          <span class="ages__age"><span class="sig ages__sig" data-lit="2" aria-hidden="true"><i></i><i></i><i></i><i></i></span>31–90 days</span>
+          <span class="ages__p mono">$10.00</span><span class="ages__p mono">$8.00</span>
+        </div>
+        <div class="ages__r ages__r--off" data-reveal>
+          <span class="ages__age"><span class="sig ages__sig" data-lit="0" aria-hidden="true"><i></i><i></i><i></i><i></i></span>After 90 days</span>
+          <span class="ages__off">Off the board</span>
+        </div>
+        <p class="ages__note" data-reveal>Example prices. Your agency sets its own price for each bracket, with and without the recording.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · The split ============ -->
+  <section class="sec sec--flush cut-sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>Three quarters stays <em>with your agency.</em></h2>
+        <p class="lede" data-reveal>When an agent takes a listing, the price they pay is split two ways, the same way every time.</p>
+      </div>
+
+      <figure class="cut" id="cut" data-reveal>
+        <div class="cut__nums">
+          <div class="cut__n"><span class="cut__v"><span data-to="75">75</span><small>%</small></span><span class="cut__l">to your agency</span></div>
+          <div class="cut__n"><span class="cut__v"><span data-to="25">25</span><small>%</small></span><span class="cut__l">to the platform</span></div>
+        </div>
+        <div class="cut__bar" aria-hidden="true"><i></i><i></i></div>
+        <figcaption class="cut__eg">On a <span class="mono">$25.00</span> listing, <span class="mono">$18.75</span> goes to your agency and <span class="mono">$6.25</span> to the platform.</figcaption>
+      </figure>
+
+      <div class="cut__facts" data-reveal-group>
+        <div data-reveal><h3 class="cut__ft">Sales stay inside your agency</h3><p>Only agents at the listing agency can take its listings, so every sale stays with the agency that listed it.</p></div>
+        <div data-reveal><h3 class="cut__ft">Nobody else sees your board</h3><p>Nobody outside your agency sees your listings or hears their recordings.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · Close ============ -->
+  <section class="close">
+    <div class="wrap close__in">
+      <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h2 class="display close__t" data-split>Hear the calls you <br><em class="accent">used to&nbsp;miss.</em></h2>
+      <p class="lede" data-reveal>A thirty-minute walkthrough of Callback Requests, set up with your products and your prices.</p>
+      <div class="close__actions" data-reveal>
+        <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html" class="btn btn--ghost">See the product</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-callbacks.js"></script>
+</body>
+</html>

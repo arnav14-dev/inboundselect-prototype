@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="trust">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trust — Inbound Select</title>
+<meta name="description" content="How Inbound Select handles the money your agents pay and the calls your callers make, what we store, who can see it, and what we don’t claim.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-trust.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Hero ============ -->
+  <section class="phero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div>
+          <p class="eyebrow" data-hero>Trust</p>
+          <h1 class="display phero__title" data-split="hero">People’s money and phone calls. <em class="accent">Handled carefully.</em></h1>
+        </div>
+        <div>
+          <p class="lede phero__lede" data-hero>Your agency runs on two things that can’t go wrong: the calls your callers make, and the money your agents pay. Here is exactly how we handle both, and what we don’t claim.</p>
+          <nav class="toc" data-hero aria-label="On this page">
+            <a href="#money" class="link-u">Money</a>
+            <a href="#calls" class="link-u">Calls</a>
+            <a href="#access" class="link-u">Access</a>
+            <a href="#claims" class="link-u">What we don’t claim</a>
+            <a href="#privacy" class="link-u">Privacy</a>
+            <a href="#terms" class="link-u">Terms</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · Money ============ -->
+  <section class="sec money-sec" id="money">
+    <div class="wrap split">
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Money</p>
+        <h2 class="h2" data-split>Every cent traces <br><em>to a&nbsp;call.</em></h2>
+        <p class="lede" data-reveal>Agent payments go through Stripe Connect into your agency’s own Stripe account. Platform fees are billed to your agency separately.</p>
+        <ul class="ticks">
+          <li data-reveal>Every charge is itemised against the call it came from.</li>
+          <li data-reveal>A refund request sits beside the charge it’s about, for your agency to review.</li>
+          <li data-reveal>Card numbers are entered on Stripe’s checkout, not on our pages.</li>
+        </ul>
+      </div>
+
+      <div class="stage-panel dots ledger-stage" data-reveal>
+        <article class="card ledger" id="ledger" aria-label="A sample weekly statement">
+          <header class="ledger__head">
+            <div>
+              <h3 class="ledger__title">Statement</h3>
+              <p class="ledger__sub">Lakeshore Senior Benefits · <span class="mono">6–12 Oct</span></p>
+            </div>
+            <span class="ledger__tag mono">Sample data</span>
+          </header>
+
+          <ol class="lg">
+            <li class="lg__row">
+              <div class="lg__line">
+                <span class="lg__t mono"><span>Tue</span> <span>2:14 pm</span></span>
+                <span class="lg__id mono">IS-24021</span>
+                <span class="lg__d">Acceptance plan · 60s<span class="lg__s">Dana W. <i>→</i> your Stripe</span></span>
+                <span class="lg__a mono">$35.00</span>
+              </div>
+            </li>
+            <li class="lg__row">
+              <div class="lg__line">
+                <span class="lg__t mono"><span>Tue</span> <span>2:14 pm</span></span>
+                <span class="lg__id mono">IS-24021</span>
+                <span class="lg__d">Connection fee<span class="lg__s"><i>→</i> Monday’s settlement</span></span>
+                <span class="lg__a mono">$2.50</span>
+              </div>
+            </li>
+            <li class="lg__row">
+              <div class="lg__line">
+                <span class="lg__t mono"><span>Tue</span> <span>2:16 pm</span></span>
+                <span class="lg__id mono">IS-24027</span>
+                <span class="lg__d">Acceptance plan · 60s<span class="lg__s">Elena M. <i>→</i> your Stripe</span></span>
+                <span class="lg__a mono">$40.00</span>
+              </div>
+            </li>
+            <li class="lg__row lg__row--refund">
+              <div class="lg__line">
+                <span class="lg__t mono"><span>Wed</span> <span>9:12 am</span></span>
+                <span class="lg__id mono">IS-24027</span>
+                <span class="lg__d">Refund requested<span class="lg__s"><span class="pill pill--red">In review</span> within 48h</span></span>
+                <span class="lg__a mono">−$40.00</span>
+              </div>
+            </li>
+            <li class="lg__row lg__row--settle">
+              <div class="lg__line">
+                <span class="lg__t mono"><span>Mon</span> <span>9:00 am</span></span>
+                <span class="lg__id mono">23 calls</span>
+                <span class="lg__d">Weekly settlement<span class="lg__s">Connection fees <i>→</i> billed to your agency</span></span>
+                <span class="lg__a mono">$57.50</span>
+              </div>
+            </li>
+          </ol>
+
+          <footer class="ledger__foot">
+            <div class="tot tot--main"><span>Paid by agents, to your Stripe</span><b class="mono" data-total="75">$75.00</b></div>
+            <div class="tot"><span>Platform fees: billed separately</span></div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · Calls ============ -->
+  <section class="sec sec--flush" id="calls">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>Every call, <em>on the&nbsp;record.</em></h2>
+        <p class="lede" data-reveal>Four questions owners ask about their callers, with the same answer at every agency, every time.</p>
+      </div>
+      <div class="rows" data-reveal-group>
+        <div class="row" data-reveal><span class="row__n">01</span><h3 class="row__t">Who can hear a call?</h3><p class="row__d">Your agency. Both sides of every call are recorded, and you can play any of them back from the call’s record. Agents see only their own calls.</p></div>
+        <div class="row" data-reveal><span class="row__n">02</span><h3 class="row__t">Who sees the caller’s number?</h3><p class="row__d">Your agency always does. The agent who took the call sees it only once the call is billed; until then it stays masked.</p></div>
+        <div class="row" data-reveal><span class="row__n">03</span><h3 class="row__t">Who decides a refund?</h3><p class="row__d">Your agency. An agent can ask within 48 hours of a charge, and every request comes to you to review.</p></div>
+        <div class="row" data-reveal><span class="row__n">04</span><h3 class="row__t">Who can be offered a call?</h3><p class="row__d">Only agents your agency has approved and who are licensed in the caller’s state. Nobody else sees it ring.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · Access ============ -->
+  <section class="sec" id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>Two roles. <em>Clear lines.</em></h2>
+        <p class="lede" data-reveal>There are two kinds of account, and nothing in between. Each one sees what it needs, and nothing&nbsp;more.</p>
+      </div>
+
+      <div class="roles">
+        <article class="role" data-reveal>
+          <p class="eyebrow no-rule">The owner or admin</p>
+          <h3 class="role__t">Agency</h3>
+          <ul class="ticks">
+            <li>Sees everything: every number, call, recording, agent and charge.</li>
+            <li>Sets the plans and prices its agents pay.</li>
+            <li>Approves every agent, and reviews every refund request.</li>
+          </ul>
+        </article>
+        <article class="role" data-reveal>
+          <p class="eyebrow no-rule">The licensed agent</p>
+          <h3 class="role__t">Agent</h3>
+          <ul class="ticks">
+            <li>Sees their own calls and their own network, never another agent’s.</li>
+            <li>Is offered calls only from states they’re licensed in.</li>
+            <li>Pays the agency directly, through Stripe.</li>
+          </ul>
+        </article>
+      </div>
+
+      <ol class="gate" data-reveal-group>
+        <li class="gate__lead" data-reveal><span class="eyebrow no-rule">Before any call <br>can reach an agent</span></li>
+        <li data-reveal><span class="gate__n mono">01</span><b>They verify their phone</b></li>
+        <li data-reveal><span class="gate__n mono">02</span><b>Your agency approves them</b></li>
+        <li data-reveal><span class="gate__n mono">03</span><b>Calls can reach them <span class="sig sig--ring" aria-hidden="true"><i></i><i></i><i></i><i></i></span></b></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 5 · What we don't claim, then privacy and terms ============ -->
+  <section class="sec sec--flush legal">
+    <div class="wrap">
+      <div class="claim" id="claims">
+        <p class="eyebrow" data-reveal>What we don’t claim</p>
+        <div class="claim__body">
+          <p class="claim__text" data-reveal>We are not currently certified under SOC&nbsp;2, ISO&nbsp;27001, HIPAA or PCI&nbsp;DSS. When that changes, this page will say so, with dates.</p>
+          <p class="claim__ask" data-reveal>Security questions go to <a href="mailto:support@inboundselect.com" class="link-u">support@inboundselect.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="legal__grid">
+        <section class="legal__col" id="privacy">
+          <p class="eyebrow" data-reveal>Privacy</p>
+          <h2 class="legal__t" data-split>Privacy, in plain words.</h2>
+          <dl class="plain" data-reveal-group>
+            <div data-reveal><dt>What we store</dt><dd>Account details, call records, call recordings and transactions.</dd></div>
+            <div data-reveal><dt>Who can see it</dt><dd>Your agency sees everything in its account. Each agent sees their own calls and their own network.</dd></div>
+            <div data-reveal><dt>Recordings</dt><dd>Stored with the call they belong to, for your agency to play back.</dd></div>
+            <div data-reveal><dt>Is it sold</dt><dd>No. We don’t sell your data, or your callers’.</dd></div>
+          </dl>
+        </section>
+        <section class="legal__col" id="terms">
+          <p class="eyebrow" data-reveal>Terms</p>
+          <h2 class="legal__t" data-split>Terms, in plain words.</h2>
+          <dl class="plain" data-reveal-group>
+            <div data-reveal><dt>Contract</dt><dd>Month to month. No annual commitment.</dd></div>
+            <div data-reveal><dt>What you pay us</dt><dd>Your monthly plan ($499, or $699 under your own brand), plus $2.50 for each call that connects for 15&nbsp;seconds or&nbsp;more.</dd></div>
+            <div data-reveal><dt>What agents pay you</dt><dd>The subscription and acceptance plans your agency sets, paid into your own Stripe account.</dd></div>
+            <div data-reveal><dt>Refunds</dt><dd>Agents can request one within 48 hours of a charge. Your agency decides.</dd></div>
+          </dl>
+        </section>
+      </div>
+      <p class="legal__end" data-reveal>The full privacy policy and terms of service are <a href="mailto:support@inboundselect.com" class="link-u">available on request</a>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 6 · Close ============ -->
+  <section class="close">
+    <div class="wrap close__in">
+      <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h2 class="display close__t" data-split>See every charge <br><em class="accent">for yourself.</em></h2>
+      <p class="lede" data-reveal>A thirty-minute walkthrough, with the statement, the recordings and the refund requests open in front of you.</p>
+      <div class="close__actions" data-reveal>
+        <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html" class="btn btn--ghost">See the product</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-trust.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Callback Requests — page-only styles (tokens from base.css only)
+   ========================================================================== */
+
+/* ---------- 1 · Hero: the headline runs the full width, the lede and actions share
+   one line beneath it, and the board sits directly under them as the hero media ---------- */
+.cb-hero { padding-bottom: clamp(96px, 11vw, 160px); }
+@media (min-width: 961px) {
+  .cb-hero .phero__grid { grid-template-columns: minmax(0, 1fr) auto; row-gap: clamp(26px, 2.6vw, 38px); }
+  .cb-hero__head { grid-column: 1 / -1; }
+  .cb-hero .phero__lede { max-width: 560px; }
+  .cb-hero .phero__actions { justify-content: flex-end; }
+}
+.cb-hero .phero__actions { margin-top: 0; }
+.cb-hero .phero__media { margin-top: clamp(48px, 5vw, 72px); }
+.cb-board__cap { margin-top: 18px; text-align: center; font-size: 14px; color: var(--muted); }
+@media (max-width: 640px) { .cb-hero .phero__title br { display: none; } }
+
+/* ---------- The board ---------- */
+.board-stage { padding: clamp(20px, 4.5vw, 64px); }
+.board { position: relative; max-width: 1080px; margin: 0 auto; background: var(--card); border-radius: var(--r-lg); box-shadow: var(--shadow-2), 0 0 0 1px var(--line); overflow: hidden; }
+
+.board__bar { display: flex; align-items: center; gap: 12px; height: 54px; padding: 0 28px; border-bottom: 1px solid var(--line-2); font-size: 13px; color: var(--muted); }
+.board__mark { width: 17px; flex: none; }
+.board__crumb i { font-style: normal; color: var(--line-3); margin: 0 4px; }
+.board__crumb b { color: var(--ink); font-weight: 540; }
+.board__count { margin-left: auto; font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+.board__filters { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding: 18px 28px; }
+.board .chip { height: 34px; padding: 0 14px; font-size: 13.5px; }
+
+.lst-list { position: relative; overflow: hidden; }
+.lst {
+  position: relative; display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 268px) 116px 168px;
+  grid-template-areas: "who player price take" "msg msg msg .";
+  column-gap: 28px; align-items: center;
+  padding: 20px 28px; border-top: 1px solid var(--line-2); background: var(--card);
+  transition: background-color var(--t-med) var(--ease);
+}
+.lst:hover, .lst.is-playing { background: var(--paper); }
+.lst.is-gone { display: none; }
+.lst.is-leaving { position: absolute; left: 0; right: 0; pointer-events: none; }
+
+.lst__who { grid-area: who; min-width: 0; }
+.lst__city { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 600; font-size: 23px; line-height: 1.15; letter-spacing: -.011em; }
+.lst__city .st { flex: none; letter-spacing: .02em; }
+.lst__meta { margin-top: 5px; font-size: 13.5px; color: var(--muted); }
+.lst__meta b { font-weight: 520; color: var(--ink-3); }
+
+.lst__player { grid-area: player; display: flex; align-items: center; gap: 12px; height: 44px; padding: 0 14px 0 6px; border-radius: 999px; background: var(--paper-2); transition: background-color var(--t-med) var(--ease); }
+.lst__play { width: 32px; height: 32px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--ink); color: #fff; transition: transform var(--t-fast) var(--ease-ui), background-color var(--t-med) var(--ease); }
+.lst__play:hover { transform: scale(1.06); }
+.lst__play:active { transform: scale(.96); }
+.lst__play svg { width: 12px; }
+.lst__play .i-play { margin-left: 2px; }
+.lst__play .i-pause { display: none; }
+.lst.is-playing .lst__play { background: var(--blue); }
+.lst.is-playing .lst__play .i-play { display: none; }
+.lst.is-playing .lst__play .i-pause { display: block; }
+.lst.is-playing .lst__player { background: var(--blue-tint); }
+.lst__wave { flex: 1; min-width: 0; height: 22px; justify-content: space-between; }
+.lst__len { min-width: 30px; text-align: right; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lst.is-playing .lst__len { color: var(--blue); }
+
+.lst__price { grid-area: price; display: flex; flex-direction: column; align-items: flex-end; text-align: right; line-height: 1.3; }
+.lst__price b { font-size: 15.5px; font-weight: 500; color: var(--ink); font-variant-numeric: tabular-nums; }
+.lst__price span { font-size: 12.5px; color: var(--muted); }
+
+.lst__take { grid-area: take; justify-self: end; min-width: 164px; }
+.lst__take > span { transition: opacity 300ms var(--ease), transform 420ms var(--ease); }
+.lst__take-b { position: absolute; opacity: 0; transform: translateY(12px); }
+.lst.is-taken .lst__take { --bg: var(--green); --fg: #fff; --fill: var(--green); color: #fff; box-shadow: none; }
+.lst.is-taken .lst__take-a { opacity: 0; transform: translateY(-12px); }
+.lst.is-taken .lst__take-b { opacity: 1; transform: none; }
+
+/* The message opens while it plays, words lighting as they're read */
+.lst__msg { grid-area: msg; display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 600ms var(--ease), opacity 420ms var(--ease); }
+.lst__msg > div { overflow: hidden; min-height: 0; }
+.lst.is-playing .lst__msg { grid-template-rows: 1fr; opacity: 1; }
+.lst__quote { margin: 16px 0 4px; padding-left: 16px; border-left: 2px solid var(--blue-bright); max-width: 64ch; font-size: 16.5px; line-height: 1.55; color: var(--muted); }
+.lst__q .w { transition: color 260ms var(--ease); }
+.lst__q .w.on { color: var(--ink-2); }
+
+.board__empty { padding: 44px 28px; border-top: 1px solid var(--line-2); text-align: center; font-family: var(--display); font-weight: 500; font-size: 19px; color: var(--muted); }
+.board__foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 16px 28px; border-top: 1px solid var(--line-2); font-size: 13px; color: var(--muted); }
+.board__foot .mono { font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--faint); }
+
+/* ---------- 2 · How a listing is born ---------- */
+.born { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
+.born__photo { aspect-ratio: 4 / 5; }
+.born__photo img { object-position: 58% 34%; }
+.born .row { grid-template-columns: 56px minmax(0, 1fr); row-gap: 10px; padding: 28px 0; }
+.born .row:first-child { padding-top: 22px; }
+.born .row__d { grid-column: 2; }
+.born .row__t { font-size: clamp(23px, 2vw, 28px); }
+
+/* ---------- 3 · Priced by how fresh it is ---------- */
+.ages { width: 100%; }
+.ages__h, .ages__r { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, .8fr); column-gap: 16px; align-items: center; }
+.ages__h { padding-bottom: 14px; border-bottom: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+.ages__h span:not(:first-child), .ages__p { text-align: right; }
+.ages__r { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.ages__age { display: flex; align-items: center; gap: 18px; font-family: var(--display); font-weight: 600; font-size: clamp(24px, 2.3vw, 32px); line-height: 1; letter-spacing: -.011em; font-variant-numeric: lining-nums tabular-nums; white-space: nowrap; }
+.ages__sig { height: 20px; gap: 3px; flex: none; color: var(--line-3); }
+.ages__sig i { width: 4px; }
+.ages__sig[data-lit="4"] i,
+.ages__sig[data-lit="3"] i:nth-child(-n+3),
+.ages__sig[data-lit="2"] i:nth-child(-n+2) { background: var(--blue-bright); }
+.ages__p { font-size: 17px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.ages__p + .ages__p { color: var(--muted); }
+.ages__r--off .ages__age { color: var(--faint); }
+.ages__off { grid-column: 2 / -1; text-align: right; font-size: 14.5px; color: var(--muted); }
+.ages__note { margin-top: 20px; font-size: 14px; color: var(--muted); }
+
+/* ---------- 4 · The split ---------- */
+.cut { margin: 0; }
+.cut__nums, .cut__bar { display: grid; grid-template-columns: 75fr 25fr; column-gap: 6px; }
+.cut__n { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.cut__v { font-family: var(--display); font-weight: 560; font-size: clamp(56px, 8vw, 120px); line-height: .9; letter-spacing: -.03em; font-variant-numeric: lining-nums tabular-nums; }
+.cut__v small { font-size: .42em; font-weight: 500; letter-spacing: 0; margin-left: .04em; color: var(--blue); }
+.cut__n + .cut__n .cut__v small { color: var(--muted); }
+.cut__l { font-size: 15px; color: var(--muted); }
+.cut__bar { height: 16px; margin: 30px 0 22px; }
+.cut__bar i { display: block; border-radius: 4px; transform-origin: 0 50%; }
+.cut__bar i:first-child { background: var(--blue-bright); }
+.cut__bar i:last-child { background: var(--line-3); }
+.cut__eg { font-size: 15.5px; color: var(--ink-3); }
+.cut__eg .mono { font-size: 14.5px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.cut__facts { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 64px); margin-top: clamp(56px, 7vw, 96px); }
+.cut__facts > div { border-top: 1px solid var(--line); padding-top: 22px; }
+.cut__ft { font-family: var(--display); font-weight: 600; font-size: clamp(23px, 2.1vw, 28px); line-height: 1.1; letter-spacing: -.011em; margin-bottom: 10px; }
+.cut__facts p { font-size: 16px; line-height: 1.6; color: var(--ink-3); max-width: 46ch; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .lst { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "who price" "player take" "msg msg"; column-gap: 20px; }
+  .lst__player, .lst__take { margin-top: 14px; }
+  .lst__player { max-width: 420px; }
+}
+
+@media (max-width: 960px) {
+  .born { grid-template-columns: 1fr; }
+  .born__photo { aspect-ratio: 4 / 3; }
+  .born__photo img { object-position: 58% 30%; }
+  .born .row { grid-template-columns: 44px minmax(0, 1fr); }
+  .fresh .split__copy { margin-bottom: 8px; }
+}
+
+@media (max-width: 640px) {
+  .board-stage { padding: 14px; border-radius: var(--r-lg); }
+  .board__bar { padding: 0 16px; height: 50px; }
+  .board__org { display: none; }
+  .board__filters { padding: 14px 16px; gap: 8px; }
+  .board .chip { height: 32px; padding: 0 12px; font-size: 13px; }
+  .board .chips { gap: 6px; }
+  .lst { grid-template-areas: "who who" "player player" "msg msg" "price take"; padding: 18px 16px; }
+  .lst__player { max-width: none; }
+  .lst__price { align-items: flex-start; text-align: left; margin-top: 14px; }
+  .lst__take { min-width: 150px; font-size: 13.5px; }
+  .lst__city { font-size: 22px; }
+  .lst__quote { font-size: 16.5px; padding-left: 12px; }
+  .board__foot { padding: 14px 16px; }
+  .ages__h { font-size: 12px; }
+  .ages__age { gap: 12px; font-size: 22px; }
+  .ages__sig { height: 16px; gap: 2px; }
+  .ages__sig i { width: 3px; }
+  .ages__p { font-size: 15px; }
+  .cut__v { font-size: 46px; }
+  .cut__l { font-size: 13.5px; }
+  .cut__facts { grid-template-columns: 1fr; }
+}

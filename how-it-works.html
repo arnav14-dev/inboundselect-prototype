@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="how">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How it works — Inbound Select</title>
+<meta name="description" content="Everything that happens to a call on Inbound Select, in order: the ring, the state, the checks, the offer, the first accept, the outcome and the itemised charge.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-how.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Hero ============ -->
+  <section class="phero hw-hero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div>
+          <p class="eyebrow" data-hero>How it works</p>
+          <h1 class="display phero__title" data-split="hero">From the first ring <br>to the <em class="accent">last cent.</em></h1>
+        </div>
+        <div>
+          <p class="lede phero__lede" data-hero>Here is everything that happens to a call on Inbound Select, in order, down to exactly what was charged&nbsp;and&nbsp;why.</p>
+          <div class="phero__actions" data-hero>
+            <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="app.html" class="btn btn--ghost">See the product</a>
+          </div>
+        </div>
+      </div>
+      <figure class="phero__media phero__photo hw-photo" data-hero-media>
+        <img src="assets/img/photos/detail.jpg" alt="A desk phone on a dark office desk, its handset resting in the cradle">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 2 · The life of a call ============ -->
+  <section class="sec lc-sec" id="life">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>The life of <em>one call.</em></h2>
+        <p class="lede" data-reveal>Follow one sample call from Tampa, Florida, from ring to receipt. Every call takes the same path.</p>
+      </div>
+
+      <ol class="lc" id="lc">
+
+        <!-- 0.0s · Ring -->
+        <li class="lc__stage" data-stage="ring">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">0.0s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">It rings on your number.</h3>
+            <p class="lc__d">Calls arrive on your own Twilio number or a managed subaccount, and each number maps to a product and a source. The caller hears a short connecting message, then ringback.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span>Ringing</span><span class="mono lc-card__m">2:14:07 PM</span></header>
+              <p class="lc-big mono">(813) •••-••10</p>
+              <dl class="lc-kvs">
+                <div class="lc-kv"><dt>Line</dt><dd>Your Twilio account</dd></div>
+                <div class="lc-kv"><dt>Product</dt><dd>Final expense</dd></div>
+                <div class="lc-kv"><dt>Source</dt><dd>Meta Ads · FL Seniors</dd></div>
+              </dl>
+            </article>
+          </div>
+        </li>
+
+        <!-- 0.2s · State -->
+        <li class="lc__stage" data-stage="state">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">0.2s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">We read the caller’s state.</h3>
+            <p class="lc__d">The state comes from the caller’s number. From here on, only agents licensed in Florida can be offered this call.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k">Caller</span><span class="lc-card__m">Final expense</span></header>
+              <div class="lc-state">
+                <span class="mono lc-state__num">(813) •••-••47</span>
+                <svg class="lc-state__arr" viewBox="0 0 44 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 6h40M36 1.5 41 6l-5 4.5"/></svg>
+                <span class="lc-state__st"><span class="st">FL</span>Florida</span>
+              </div>
+              <div class="lc-kv"><dt>Agents licensed in FL</dt><dd class="mono">9 of 14</dd></div>
+            </article>
+          </div>
+        </li>
+
+        <!-- 0.3s · Checks -->
+        <li class="lc__stage" data-stage="checks">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">0.3s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">We check who can take it.</h3>
+            <p class="lc__d">Every agent in your agency is checked against five rules. Miss any one, and the call is never shown to them.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k"><i class="av">DW</i>Dana Whitfield</span><span class="pill pill--green lc-elig">Eligible</span></header>
+              <ol class="lc-checks">
+                <li class="tstep is-done"><span class="tstep__ic"></span><span>Available right now</span></li>
+                <li class="tstep is-done"><span class="tstep__ic"></span><span>Approved by your agency</span></li>
+                <li class="tstep is-done"><span class="tstep__ic"></span><span>Licensed in Florida</span><span class="tstep__val"><span class="st">FL</span></span></li>
+                <li class="tstep is-done"><span class="tstep__ic"></span><span>Subscription active</span></li>
+                <li class="tstep is-done"><span class="tstep__ic"></span><span>Wallet covers plan + $10</span><span class="tstep__val mono">$182.40</span></li>
+              </ol>
+              <p class="lc-card__f"><span><b>6 of 14</b> agents pass all five</span></p>
+            </article>
+          </div>
+        </li>
+
+        <!-- 0.4s · Offer -->
+        <li class="lc__stage" data-stage="offer">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">0.4s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">Everyone eligible sees it at once.</h3>
+            <p class="lc__d">All six eligible agents are offered the call at the same moment, with 40 seconds to accept.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k">Offered together</span><span class="mono lc-card__m">40s to accept</span></header>
+              <span class="lc-bar" aria-hidden="true"><i></i></span>
+              <ul class="lc-offer">
+                <li><i class="av">DW</i><span>Dana Whitfield</span><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span class="mono">0.4s</span></li>
+                <li><i class="av">MR</i><span>Marcus Reed</span><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span class="mono">0.4s</span></li>
+                <li><i class="av">KO</i><span>Kwame Osei</span><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span class="mono">0.4s</span></li>
+                <li><i class="av">PN</i><span>Priya Natarajan</span><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span class="mono">0.4s</span></li>
+              </ul>
+              <p class="lc-card__f">and 2 more, at the same moment</p>
+            </article>
+          </div>
+        </li>
+
+        <!-- Or, at 40s · nobody accepts (a branch off the offer; the main line carries on to 2.8s) -->
+        <li class="lc__stage lc__stage--branch" data-stage="callback">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">Or, at 40s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">If nobody accepts in&nbsp;40&nbsp;seconds…</h3>
+            <p class="lc__d">The caller can leave a message, and it becomes a Callback Request your agents can pick up later.</p>
+            <p class="lc__more"><a href="callback-requests.html" class="link-u">How Callback Requests work <span aria-hidden="true">→</span></a></p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="pill pill--amber">Callback Request</span><span class="mono lc-card__m">0–7 days</span></header>
+              <p class="lc-cb__who">Tampa, FL <span>· Final expense</span></p>
+              <div class="lc-cb__msg"><span class="wave lc-cb__wave" data-wave="58" data-seed="19"></span><span class="mono">0:31</span></div>
+            </article>
+          </div>
+        </li>
+
+        <!-- 2.8s · Accept -->
+        <li class="lc__stage" data-stage="accept">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">2.8s</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">The first to accept is connected.</h3>
+            <p class="lc__d">Dana accepts in 2.8 seconds and picks a 60-second plan from the prices you set. The call goes straight through, recorded on both sides, with the product script on her screen.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k"><span class="live-dot"></span>Connected</span><span class="lc-card__m">Recording · both sides</span></header>
+              <div class="lc-who"><i class="av">DW</i><div><b>Dana Whitfield</b><span>Plan 60s · $35</span></div><span class="wave wave--live wave--mini" data-wave="12" data-seed="9"></span></div>
+              <div class="lc-script"><span class="lc-script__k">Script · Final expense</span><p>“Hi, this is Dana with Lakeshore Senior Benefits. You called about final expense cover. Is now still a good time?”</p></div>
+              <p class="lc-card__f">The other five see <span class="pill no-dot">Taken</span></p>
+            </article>
+          </div>
+        </li>
+
+        <!-- 4:12 talk · Outcome -->
+        <li class="lc__stage" data-stage="outcome">
+          <span class="lc__seg" aria-hidden="true"><i></i></span>
+          <span class="lc__time mono">4:12 talk</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">The call ends. An outcome is logged.</h3>
+            <p class="lc__d">The agent logs one of eight outcomes. A sale records the premium; an appointment is added to Google Calendar.</p>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k">Outcome</span><span class="mono lc-card__m">IS-24021 · 4:12</span></header>
+              <div class="lc-outs">
+                <span class="lc-out is-on">Sale</span><span class="lc-out">Appointment</span><span class="lc-out">Not interested</span><span class="lc-out">Dead air</span><span class="lc-out">Communication barrier</span><span class="lc-out">Wrong state</span><span class="lc-out">Client hung up</span><span class="lc-out">Follow up</span>
+              </div>
+              <div class="lc-kv lc-prem"><dt>Premium</dt><dd class="mono">$48.00 / month</dd></div>
+            </article>
+          </div>
+        </li>
+
+        <!-- After the call · Itemised -->
+        <li class="lc__stage" data-stage="receipt">
+          <span class="lc__time mono">after the call</span>
+          <span class="lc__node" aria-hidden="true"></span>
+          <div class="lc__body">
+            <h3 class="lc__t">Every cent is itemised.</h3>
+            <p class="lc__d">Talk time passed the plan’s 60 seconds, so $35 moved from Dana’s wallet to your Stripe account, and the caller’s number unlocked for her.</p>
+            <ul class="ticks lc-ticks">
+              <li data-reveal>Your agency pays us $2.50 per connected call (15 seconds or more), collected at $100 or every Monday.</li>
+              <li data-reveal>Dana has 48 hours to request a refund. You review it.</li>
+              <li data-reveal>Shorter than the plan? Nothing is charged, and Dana can recover the contact for $35 until midnight.</li>
+            </ul>
+          </div>
+          <div class="lc__art">
+            <article class="card lc-card">
+              <header class="lc-card__h"><span class="lc-card__k">Itemised · <span class="mono">IS-24021</span></span><span class="pill pill--green">Billed</span></header>
+              <dl class="lc-items">
+                <div class="lc-li"><dt>Talk time<span class="lc-li__s">Past the 60s plan</span></dt><dd class="mono">4:12</dd></div>
+                <div class="lc-li"><dt>Acceptance plan · 60s<span class="lc-li__s">Dana’s wallet → your Stripe</span></dt><dd class="mono">$35.00</dd></div>
+                <div class="lc-li"><dt>Connection fee<span class="lc-li__s">Your agency → Inbound Select</span></dt><dd class="mono">$2.50</dd></div>
+                <div class="lc-li"><dt>Caller number<span class="lc-li__s">Unlocked for Dana</span></dt><dd class="mono">(813) •••-••47</dd></div>
+                <div class="lc-li"><dt>Refund window</dt><dd class="mono">48h</dd></div>
+              </dl>
+            </article>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 3 · What the agent sees (the interactive moment) ============ -->
+  <section class="sec sec--flush hw-agent">
+    <div class="wrap split">
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>What the agent sees</p>
+        <h2 class="h2" data-split>Forty seconds <br>to <em>say yes.</em></h2>
+        <p class="lede" data-reveal>This is the card every eligible agent sees, at the same moment. Pick a plan, then accept or pass.</p>
+        <ul class="ticks">
+          <li data-reveal>The plan is picked at the moment of accepting.</li>
+          <li data-reveal>The caller’s number stays hidden until the call is billed.</li>
+          <li data-reveal>Passing costs nothing. The call keeps ringing for the others.</li>
+        </ul>
+      </div>
+
+      <div class="stage-panel dots hw-stage" data-reveal>
+        <article class="card ac" id="ac" data-state="ringing" aria-label="Sample incoming call card">
+          <div class="ac__views">
+
+            <!-- Ringing -->
+            <div class="ac__view" data-v="ring">
+              <div class="ac__top">
+                <span class="ac__k"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span>Incoming call</span>
+                <div class="ac__cd" role="timer" aria-label="Seconds left to accept">
+                  <svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ac__cd-bg" cx="32" cy="32" r="28"/><circle class="ac__cd-fg" id="acRing" cx="32" cy="32" r="28"/></svg>
+                  <b class="mono" id="acN">40</b>
+                </div>
+              </div>
+              <h3 class="ac__t">Final expense</h3>
+              <p class="ac__loc">Tampa, FL · <span class="mono">(813) •••-••47</span></p>
+              <p class="ac__offer">Offered to you and 5 other licensed agents. First to accept is connected.</p>
+              <div class="ac__plan">
+                <div class="ac__plan-h"><span>Acceptance plan</span><span id="acHint">Charged only if talk time reaches 60s</span></div>
+                <div class="ac-seg" role="radiogroup" aria-label="Acceptance plan" id="acSeg">
+                  <span class="ac-seg__thumb" aria-hidden="true"></span>
+                  <button type="button" role="radio" class="ac-seg__o" aria-checked="false" tabindex="-1" data-s="30" data-p="20"><b>30s</b><span>$20</span></button>
+                  <button type="button" role="radio" class="ac-seg__o" aria-checked="true" tabindex="0" data-s="60" data-p="35"><b>60s</b><span>$35</span></button>
+                  <button type="button" role="radio" class="ac-seg__o" aria-checked="false" tabindex="-1" data-s="90" data-p="45"><b>90s</b><span>$45</span></button>
+                </div>
+              </div>
+              <div class="ac__act">
+                <div class="ac__btns">
+                  <button type="button" class="btn btn--blue ac__accept" id="acAccept">Accept</button>
+                  <button type="button" class="btn btn--ghost ac__pass" id="acPass">Pass</button>
+                </div>
+                <div class="ac__st" id="acSt" aria-live="polite"></div>
+              </div>
+            </div>
+
+            <!-- Connected -->
+            <div class="ac__view" data-v="live" aria-hidden="true" inert>
+              <div class="ac__top">
+                <span class="ac__k"><span class="live-dot"></span>Connected</span>
+                <span class="mono ac__timer" id="acTimer">00:00</span>
+              </div>
+              <h3 class="ac__t">Margaret E.</h3>
+              <p class="ac__loc">Tampa, FL · Final expense</p>
+              <div class="wave wave--live ac__wave" data-wave="72" data-seed="31" aria-hidden="true"></div>
+              <div class="ac__pl">
+                <div class="ac__pl-h"><span id="acPlL">Plan 60s · $35</span><span id="acPlR">60s to go</span></div>
+                <span class="ac__bar" aria-hidden="true"><i id="acBar"></i></span>
+              </div>
+              <div class="ac__row"><span>Recording</span><span class="ac__row-v">Both sides</span></div>
+              <div class="ac__row"><span>Caller number</span><span class="ac__row-v"><b class="mono">(813) •••-••47</b><span class="ac__row-s">Shown once billed</span></span></div>
+            </div>
+
+          </div>
+          <footer class="ac__foot">
+            <span class="mono ac__sample">Sample call</span>
+            <span class="ac__links"><button type="button" class="ac__link link-u" id="acSkip">Skip ahead</button><button type="button" class="ac__link link-u" id="acReset">Reset</button></span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · FAQ ============ -->
+  <section class="sec sec--flush hw-faq">
+    <div class="wrap hw-faq__grid">
+      <h2 class="h2" data-split>Questions owners <br><em>ask first.</em></h2>
+      <div class="faq">
+        <details><summary>What if two agents accept at the same moment?</summary><div class="faq__a"><div><p>The first accept wins and is connected. The others see that the call was taken, and stay available.</p></div></div></details>
+        <details><summary>Is there a round-robin option?</summary><div class="faq__a"><div><p>No. Every eligible agent sees the call at the same moment, and the first to accept takes it.</p></div></div></details>
+        <details><summary>What does the caller hear while it rings?</summary><div class="faq__a"><div><p>A short connecting message, then ringback. If nobody accepts within 40 seconds, they can leave a message.</p></div></div></details>
+        <details><summary>Are calls recorded, and who can listen?</summary><div class="faq__a"><div><p>Yes, both sides of every connected call. Your agency can play back any recording from the call’s record.</p></div></div></details>
+        <details><summary>What if the call drops before the plan’s length?</summary><div class="faq__a"><div><p>Nothing is charged and the number stays hidden. The agent can recover the contact for the plan price until midnight that day.</p></div></div></details>
+        <details><summary>Can an agent take two calls at once?</summary><div class="faq__a"><div><p>Not by default. An agent on a call is offered nothing else until it ends.</p></div></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · Close ============ -->
+  <section class="close">
+    <div class="wrap close__in">
+      <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h2 class="display close__t" data-split>Watch a call route <br><em class="accent">in your own console.</em></h2>
+      <p class="lede" data-reveal>In a thirty-minute demo, we route a sample call through the console and walk through every line of its receipt.</p>
+      <div class="close__actions" data-reveal>
+        <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html" class="btn btn--ghost">See the product</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-how.js"></script>
+</body>
+</html>

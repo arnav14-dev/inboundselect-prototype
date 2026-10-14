@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="agents">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For agents — Inbound Select</title>
+<meta name="description" content="Take inbound calls about final expense, Medicare and life cover in the states you're licensed in. You choose when you're available, and you only pay when a call reaches your plan's length.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-agents.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Hero ============ -->
+  <section class="phero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div>
+          <p class="eyebrow" data-hero>For licensed agents</p>
+          <h1 class="display phero__title" data-split="hero">Stop dialling.<br><em class="accent">Start answering.</em></h1>
+        </div>
+        <div>
+          <p class="lede phero__lede" data-hero>Calls come to you from people asking about final expense, Medicare or life cover, in the states you’re licensed in. You choose when you’re available, and you only pay when a call reaches your plan’s length.</p>
+          <div class="phero__actions" data-hero>
+            <a href="signin.html" class="btn">Get agent access <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="app.html#/agent" class="btn btn--ghost">See the product</a>
+          </div>
+        </div>
+      </div>
+      <figure class="phero__media phero__photo agt-hero__photo" data-hero-media>
+        <img src="assets/img/photos/agent.jpg" alt="A licensed agent at his desk, wearing a headset, typing on a laptop under a desk lamp">
+        <figcaption class="ring-card" aria-hidden="true">
+          <span class="ring-card__top"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span>Incoming call</span><span class="mono ring-card__t">0:40</span></span>
+          <b class="ring-card__city">Tampa, FL</b>
+          <span class="ring-card__meta">Final expense · you’re licensed in <span class="st">FL</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 2 · A shift, start to finish ============ -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>A shift, <em>start to finish.</em></h2>
+        <p class="lede" data-reveal>No lists, no dialler, no chasing. This is how a call looks from your side of the screen.</p>
+      </div>
+
+      <ol class="shift" id="shift">
+        <li class="shift__s" data-reveal>
+          <span class="shift__time mono">8:58 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">Set yourself available</h3>
+          <p class="shift__d">One switch. Calls are only offered to you while it’s on, and only from your states.</p>
+        </li>
+        <li class="shift__s shift__s--ring" data-reveal>
+          <span class="shift__time mono">9:14 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">A call rings</h3>
+          <p class="shift__d">You see the state and the product, and you have 40 seconds to accept.</p>
+        </li>
+        <li class="shift__s" data-reveal>
+          <span class="shift__time mono">9:14 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">Pick your plan and accept</h3>
+          <p class="shift__d">Choose 30, 60 or 90 seconds. The first agent to accept is put through.</p>
+        </li>
+        <li class="shift__s" data-reveal>
+          <span class="shift__time mono">9:15 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">Talk, with the script on screen</h3>
+          <p class="shift__d">Your agency’s script stays beside the call details until you hang up.</p>
+        </li>
+        <li class="shift__s" data-reveal>
+          <span class="shift__time mono">9:31 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">Log the outcome</h3>
+          <p class="shift__d">Sale, appointment, follow up and more. Appointments go to Google Calendar.</p>
+        </li>
+        <li class="shift__s" data-reveal>
+          <span class="shift__time mono">9:31 am</span><span class="shift__dot"></span><span class="shift__ln" aria-hidden="true"></span>
+          <h3 class="shift__t">See exactly what you paid</h3>
+          <p class="shift__d">Each charge sits against the call it came from, to the cent.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 3 · Only charged when it counts (signature interactive) ============ -->
+  <section class="sec sec--flush" id="talk-time">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>Only charged when <em>it counts.</em></h2>
+        <p class="lede" data-reveal>Your agency sets a few plans, each a length and a price. You pick one as you accept. If the call ends before that length, you pay nothing.</p>
+      </div>
+
+      <div class="stage-panel dots tt-stage" data-reveal>
+        <div class="tt is-charged" id="tt">
+          <article class="card tt__ctl">
+            <div class="tt__top">
+              <span class="tt__l">Your plan</span>
+              <div class="seg" id="ttSeg" role="radiogroup" aria-label="Acceptance plan">
+                <span class="seg__thumb" aria-hidden="true"></span>
+                <button class="seg__b" type="button" role="radio" aria-checked="false" data-s="30" data-p="20"><b>30s</b> · $20</button>
+                <button class="seg__b" type="button" role="radio" aria-checked="true" data-s="60" data-p="35"><b>60s</b> · $35</button>
+                <button class="seg__b" type="button" role="radio" aria-checked="false" data-s="90" data-p="45"><b>90s</b> · $45</button>
+              </div>
+            </div>
+
+            <div class="tt__clock">
+              <span class="tt__l">Talk time</span>
+              <span class="tt__clock-v"><span id="ttClock">1:12</span></span>
+            </div>
+
+            <div class="tt__track" id="ttTrack" style="--p: .3333; --t: .4">
+              <div class="tt__line">
+                <span class="tt__zone"></span>
+                <span class="tt__fill tt__fill--a"></span>
+                <span class="tt__fill tt__fill--b"></span>
+              </div>
+              <div class="tt__mark"><span class="tt__mark-l mono"><span id="ttMarkL">60s</span> plan</span></div>
+              <input class="range tt__range" id="ttRange" type="range" min="0" max="180" step="1" value="72" aria-label="Talk time in seconds" aria-valuetext="1 minute 12 seconds">
+            </div>
+            <div class="tt__ticks mono" aria-hidden="true"><span>0:00</span><span>0:30</span><span>1:00</span><span>1:30</span><span>2:00</span><span>2:30</span><span>3:00</span></div>
+
+            <p class="tt__hint">Drag to change how long the call lasts.</p>
+          </article>
+
+          <article class="card tt__out" aria-live="polite">
+            <header class="tt__out-head">
+              <span class="tt__swap tt__pills"><span class="pill pill--green tt__a">Charged</span><span class="pill tt__b">Not charged</span></span>
+              <span class="mono tt__id">Tampa, FL · IS-24021</span>
+            </header>
+            <p class="tt__amt"><span class="tt__cur">$</span><span id="ttAmt">35.00</span></p>
+            <p class="tt__why" id="ttWhy">The call reached 60 seconds, so your 60s plan applies.</p>
+            <dl class="tt__rows">
+              <div class="tt__r">
+                <dt>Caller’s number</dt>
+                <dd><span class="tt__swap mono"><span class="tt__a">(813) 402-••47</span><span class="tt__b">(813) •••-••47</span></span><span class="tt__swap"><span class="tt__a tt__ok">Unlocked</span><span class="tt__b tt__mute">Hidden</span></span></dd>
+              </div>
+              <div class="tt__r">
+                <dt class="tt__swap"><span class="tt__a">Refund window</span><span class="tt__b">Recover the number</span></dt>
+                <dd class="tt__swap"><span class="tt__a">48 hours</span><span class="tt__b"><span class="mono" id="ttRec">$35.00</span> until midnight</span></dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </div>
+      <p class="tt-fine" data-reveal>You see the plans and prices before you accept. The caller’s number stays hidden until a call is billed, and you can ask for a refund on any charge within 48 hours.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4 · Your wallet, your calls ============ -->
+  <section class="sec">
+    <div class="wrap split">
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Wallet</p>
+        <h2 class="h2" data-split>Your wallet, <em>your calls.</em></h2>
+        <p class="lede" data-reveal>What you’ve paid, what you’ve won and what’s booked, kept together and itemised to the call.</p>
+        <dl class="kv">
+          <div data-reveal><dt>Wallet</dt><dd>Top up through your agency’s Stripe. To accept a call you need the plan price plus a $10 buffer. Below that, calls simply aren’t offered until you top up.</dd></div>
+          <div data-reveal><dt>Refunds</dt><dd>Ask within 48 hours of any charge. Your agency reviews it.</dd></div>
+          <div data-reveal><dt>Appointments</dt><dd>Booked straight into your Google Calendar.</dd></div>
+          <div data-reveal><dt>Your clients</dt><dd>Every call you’ve won, kept in one place.</dd></div>
+        </dl>
+      </div>
+
+      <div class="wl-wrap" data-reveal>
+        <article class="card wl" aria-label="A sample agent wallet">
+          <header class="wl__head">
+            <div>
+              <p class="wl__l">Wallet balance</p>
+              <p class="wl__bal"><span class="wl__cur">$</span>182.50</p>
+            </div>
+            <span class="pill pill--green">Ready for calls</span>
+          </header>
+          <p class="wl__need"><span>60s plan $35.00 + $10.00 buffer</span><span class="mono">$45.00 needed</span></p>
+          <ul class="wl__items">
+            <li><span class="wl__w"><b>Tampa, FL</b><span>Final expense · 60s plan · talked 1:12</span></span><span class="wl__amt mono">−$35.00</span></li>
+            <li><span class="wl__w"><b>Columbus, OH</b><span>Medicare · ended at 0:41 · not charged</span></span><span class="wl__amt wl__amt--zero mono">$0.00</span></li>
+            <li><span class="wl__w"><b>Refund approved</b><span>Ocala, FL · reviewed by your agency</span></span><span class="wl__amt wl__amt--in mono">+$20.00</span></li>
+            <li><span class="wl__w"><b>Top up</b><span>Lakeshore Senior Benefits · Stripe</span></span><span class="wl__amt wl__amt--in mono">+$200.00</span></li>
+          </ul>
+          <footer class="wl__foot">
+            <span class="wl__cal"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3" stroke="currentColor" stroke-width="1.2"/></svg>Thu 2:30 pm · Margaret E. · in Google Calendar</span>
+            <span class="wl__sample">Sample data</span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5 · The person on the line ============ -->
+  <section class="sec sec--flush">
+    <div class="wrap human">
+      <figure class="photo human__photo" data-photo>
+        <img src="assets/img/photos/caller-2.jpg" alt="An older man on the phone, sitting on his sofa at home" loading="lazy">
+      </figure>
+      <div class="human__copy">
+        <p class="eyebrow" data-reveal>On the other end</p>
+        <h2 class="h2 human__line" data-split>The person on the line <em>chose to ring.</em></h2>
+        <p class="lede" data-reveal>They saw an advert or a letter, picked up the phone and asked to talk about cover. Nobody is surprised to hear from you. Your job is to listen well.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · FAQ ============ -->
+  <section class="sec sec--flush">
+    <div class="wrap faq-grid">
+      <div class="faq-grid__head">
+        <h2 class="h2" data-split>Before your <em>first shift.</em></h2>
+        <p class="lede" data-reveal>Anything else is set by your agency, so they are the best people to ask.</p>
+      </div>
+      <div class="faq" data-reveal>
+        <details><summary>Do I need my own licence?</summary><div class="faq__a"><div><p>Yes. You need an active licence in each state you take calls from, and you’re only ever offered calls from those states.</p></div></div></details>
+        <details><summary>Who sets the prices?</summary><div class="faq__a"><div><p>Your agency. It sets your subscription and the acceptance plans, such as 30 seconds for $20 or 60 seconds for $35. You see the price before you accept.</p></div></div></details>
+        <details><summary>Can I pause?</summary><div class="faq__a"><div><p>Yes, with one switch. Calls stop being offered to you until you switch it back on. Your clients and history stay exactly where they are.</p></div></div></details>
+        <details><summary>What if the caller hangs up early?</summary><div class="faq__a"><div><p>If the call ends before your plan’s length, you’re not charged. You can still recover the caller’s number for the plan price until midnight that day.</p></div></div></details>
+        <details><summary>How do I join?</summary><div class="faq__a"><div><p>Through your agency’s invite, or a referral code from an agent already on its team. Once you’re approved and your wallet covers your plan plus the $10 buffer, you can set yourself available.</p></div></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7 · Close ============ -->
+  <section class="close">
+    <div class="wrap close__in">
+      <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h2 class="display close__t" data-split>Be the one <br><em class="accent">who picks up.</em></h2>
+      <p class="lede" data-reveal>Ask your agency for an invite, or use a referral code from an agent on its team.</p>
+      <div class="close__actions" data-reveal>
+        <a href="signin.html" class="btn">Get agent access <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html#/agent" class="btn btn--ghost">See the product</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-agents.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Inbound Select — Sign in
+   One viewport on desktop: a sign-in card beside a tall photo panel, both
+   on the site's .wrap gutters (80 → 1360 at 1440 wide), so the card lines
+   up with the logo and the photo with the nav's right edge.
+   Uses only tokens from base.css.
+   ========================================================================== */
+
+.si { display: grid; grid-template-columns: minmax(360px, 448px) minmax(0, 1fr); column-gap: clamp(48px, 7vw, 120px); width: 100%; max-width: calc(var(--maxw) + var(--gutter) * 2); min-height: 100vh; min-height: 100svh; margin: 0 auto; padding: 96px var(--gutter) 32px; }
+.si__side { display: flex; align-items: center; justify-content: flex-start; padding: 8px 0 12px; }
+
+/* ---------- Card ---------- */
+.si__card { width: 100%; max-width: 448px; background: var(--card); border-radius: 22px; box-shadow: 0 0 0 1px var(--line), var(--shadow-1); padding: clamp(28px, 3vw, 40px); }
+.js.motion .si__card { opacity: 0; }
+
+/* Role tabs: a segmented control with a sliding indicator */
+.seg { position: relative; display: grid; grid-template-columns: 1fr 1fr; padding: 4px; margin-bottom: 26px; border-radius: 999px; background: var(--paper-2); box-shadow: inset 0 0 0 1px var(--line); }
+.seg__b { position: relative; z-index: 1; height: 40px; border-radius: 999px; font-size: 14.5px; font-weight: 520; color: var(--muted); transition: color var(--t-med) var(--ease); }
+.seg__b:hover { color: var(--ink-2); }
+.seg__b[aria-selected="true"] { color: var(--ink); }
+.seg__ind { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 999px; background: var(--card); box-shadow: 0 0 0 1px var(--line), 0 1px 2px rgb(14 17 22 / .05), 0 4px 12px -2px rgb(14 17 22 / .08); transition: transform 520ms var(--ease); }
+.seg[data-role="agent"] .seg__ind { transform: translateX(100%); }
+
+.si__t { font-size: clamp(40px, 3.6vw, 52px); line-height: 1; }
+.si__t em { display: inline-block; }
+.si__l { min-height: 3.2em; margin-top: 12px; font-size: 15.5px; line-height: 1.6; color: var(--ink-3); }
+
+.si__form { display: grid; gap: 16px; margin-top: 22px; }
+.si .field { gap: 8px; }
+.si .input { height: 52px; font-size: 16px; }
+.si .input:hover:not(:focus) { box-shadow: inset 0 0 0 1px var(--faint); }
+.si__row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.si__row label { font-size: 13.5px; font-weight: 540; color: var(--ink-2); }
+.si__forgot { font-size: 13px; color: var(--blue); }
+.si__pw { position: relative; }
+.si__pw .input { padding-right: 76px; }
+.si__show { position: absolute; right: 8px; top: 50%; height: 34px; padding: 0 12px; border-radius: var(--r-sm); transform: translateY(-50%); font-size: 13px; font-weight: 520; color: var(--muted); transition: color var(--t-fast) var(--ease-ui), background var(--t-fast) var(--ease-ui); }
+.si__show:hover { color: var(--ink); background: var(--paper-2); }
+
+.si__note { display: grid; grid-template-rows: 0fr; margin-top: -8px; opacity: 0; font-size: 13px; line-height: 1.5; color: var(--muted); transition: grid-template-rows var(--t-med) var(--ease), margin var(--t-med) var(--ease), opacity 260ms var(--ease); }
+.si__note > span { overflow: hidden; min-height: 0; }
+.si__note.is-on { grid-template-rows: 1fr; margin-top: 0; opacity: 1; }
+
+.si__btn { width: 100%; height: 54px; margin-top: 6px; }
+.si__btn > span { display: inline-flex; align-items: center; gap: 10px; transition: opacity 300ms var(--ease), transform 400ms var(--ease); }
+.si__btn-b { position: absolute; opacity: 0; transform: translateY(12px); }
+.si__btn-b .sig { height: 13px; }
+.si__btn.is-loading { pointer-events: none; }
+.si__btn.is-loading .si__btn-a { opacity: 0; transform: translateY(-12px); }
+.si__btn.is-loading .si__btn-b { opacity: 1; transform: none; }
+
+.si__alt { display: grid; gap: 6px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line-2); font-size: 14px; color: var(--muted); }
+.si__alt a { color: var(--ink); font-weight: 520; }
+
+/* ---------- Photo panel ---------- */
+.si__photo { position: relative; margin: 0; border-radius: var(--r-lg); overflow: hidden; background: var(--paper-3); }
+.si__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 86% 30%; filter: grayscale(1) contrast(1.03) brightness(1.04); }
+
+/* the small ticket over the photo */
+.si__tk { position: absolute; left: clamp(20px, 2.4vw, 36px); bottom: clamp(20px, 2.4vw, 36px); width: min(330px, calc(100% - 40px)); padding: 18px 18px 14px; border-radius: var(--r-lg); background: var(--card); box-shadow: var(--shadow-pop); }
+.si__tk-h { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line-2); font-size: 13.5px; }
+.si__tk-s { display: inline-flex; align-items: center; gap: 9px; }
+.si__tk-s b { font-weight: 560; color: var(--ink); }
+.si__tk-live { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; color: var(--ink-3); }
+.si__q li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; height: 44px; border-bottom: 1px solid var(--line-2); font-size: 14px; color: var(--ink-2); }
+.si__q-c span { font-size: 12.5px; color: var(--muted); margin-left: 4px; }
+.si__q-t { font-size: 12.5px; color: var(--blue); font-variant-numeric: tabular-nums; }
+.si__tk-f { padding-top: 10px; font-size: 11.5px; color: var(--faint); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .si { grid-template-columns: 1fr; max-width: none; padding: 76px 0 0; }
+  .si__photo { display: none; }
+  .si__side { justify-content: center; padding: 32px var(--gutter) 48px; }
+}
+@media (max-width: 640px) {
+  .si__side { align-items: flex-start; padding: 24px 16px 40px; }
+  .si__card { padding: 24px 20px 26px; }
+  .seg { margin-bottom: 26px; }
+  .si__t { font-size: 40px; }
+}
+@media (max-height: 800px) and (min-width: 961px) {
+  .si { padding-top: 88px; padding-bottom: 20px; }
+  .si__side { padding-top: 0; padding-bottom: 0; }
+  .si__card { padding: 24px 32px; }
+  .seg { margin-bottom: 20px; }
+  .si__t { font-size: 38px; }
+  .si__t br { display: none; }
+  .si__l { min-height: 0; margin-top: 8px; }
+  .si__form { gap: 12px; margin-top: 16px; }
+  .si .input { height: 48px; }
+  .si__btn { height: 50px; margin-top: 4px; }
+  .si__alt { margin-top: 16px; padding-top: 14px; }
+}

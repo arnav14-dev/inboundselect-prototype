@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="home">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Inbound Select — Every ring finds the right agent</title>
+<meta name="description" content="Inbound Select offers each call to the agents licensed in the caller's state and free right now. The first to accept is connected, and every charge is itemised against the call it came from.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+
+<!-- ============ Intro (once per session) ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__mark">
+    <svg viewBox="94 28 1053 1221" class="intro__svg">
+      <rect class="ib-bar ib-bar--1" x="374" y="536" width="123" height="224"/>
+      <rect class="ib-bar ib-bar--2" x="586" y="393" width="122" height="367"/>
+      <rect class="ib-bar ib-bar--3" x="816" y="229" width="122" height="531"/>
+      <rect class="ib-bar ib-bar--4" x="1029" y="102" width="116" height="658"/>
+    </svg>
+  </div>
+</div>
+
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+<!-- ============ 1 · Hero ============ -->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow" data-hero>For insurance agencies · Final expense · Medicare · Life</p>
+      <h1 class="display hero__title" data-split="hero">Every ring finds <br>the <em class="accent">right agent.</em></h1>
+      <p class="lede hero__lede" data-hero>Each call is offered to the agents licensed in the caller’s state and free right now. The first to accept is connected, and every charge is itemised against the call it came from.</p>
+      <div class="hero__actions" data-hero>
+        <a href="demo.html" class="btn">Book a demo
+          <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html" class="btn btn--ghost">See the product</a>
+      </div>
+      <p class="hero__note mono" data-hero>Your numbers · Your agents · Your prices</p>
+    </div>
+
+    <div class="hero__stage" data-stage>
+      <div class="stage dots">
+        <p class="stage__label mono"><span class="live-dot"></span> Live routing <span class="stage__sample">· sample call</span></p>
+
+        <div class="ticket-stack" aria-hidden="true"><i></i><i></i></div>
+
+        <article class="ticket" id="ticket" aria-label="An example call being routed">
+          <header class="ticket__head">
+            <span class="ticket__status"><span class="sig sig--ring" id="tkSig"><i></i><i></i><i></i><i></i></span><span id="tkStatus">Incoming call</span></span>
+            <span class="mono ticket__time" id="tkTime">2:14 PM</span>
+          </header>
+          <div class="ticket__who">
+            <h3 class="ticket__city" id="tkCity">Tampa, FL</h3>
+            <p class="ticket__meta"><span id="tkProduct">Final expense</span> · <span class="mono" id="tkNum">(813) •••-••47</span></p>
+          </div>
+
+          <ol class="ticket__steps">
+            <li class="tstep" data-step="1">
+              <span class="tstep__ic"></span>
+              <span class="tstep__txt">State detected</span>
+              <span class="tstep__val"><span class="st" id="tkState">FL</span></span>
+            </li>
+            <li class="tstep" data-step="2">
+              <span class="tstep__ic"></span>
+              <span class="tstep__txt" id="tkOfferTxt">Offered to 6 licensed agents</span>
+              <span class="tstep__val avs" id="tkAvs"></span>
+            </li>
+            <li class="tstep" data-step="3">
+              <span class="tstep__ic"></span>
+              <span class="tstep__txt" id="tkWinTxt"><b>Dana Whitfield</b> accepted</span>
+              <span class="tstep__val mono" id="tkAccept">2.8s</span>
+              <figure class="note" id="heroNote" aria-hidden="true">
+                <figcaption>First to accept <br>is connected.</figcaption>
+                <svg viewBox="0 0 120 46" fill="none"><path id="noteArrow" d="M30 4 C 52 30, 84 36, 114 30" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path id="noteHead" d="M104 23 L115 30 L104 37" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </figure>
+            </li>
+            <li class="tstep" data-step="4">
+              <span class="tstep__ic"></span>
+              <span class="tstep__txt" id="tkConnTxt">Connected</span>
+              <span class="tstep__val tstep__live"><span class="wave wave--live wave--mini" id="tkWave"></span><span class="mono" id="tkTimer">00:00</span></span>
+            </li>
+          </ol>
+
+          <footer class="ticket__bill" id="tkBill">
+            <div class="bill-row"><span>Acceptance plan · <span id="tkPlanS">60s</span></span><span class="mono" id="tkPlanP">$35.00</span></div>
+            <div class="bill-row"><span>Connection fee</span><span class="mono">$2.50</span></div>
+            <div class="bill-row bill-row--total"><span class="pill pill--green">Billed · number unlocked</span><span class="ticket__fine">Itemised to call <span class="mono" id="tkId">IS-24021</span></span></div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- Integrations strip -->
+  <div class="wrap">
+    <ul class="runs" data-reveal-group>
+      <li class="runs__lead" data-reveal><span class="eyebrow no-rule">Runs on accounts <br>you already have</span></li>
+      <li data-reveal><b>Twilio</b><span>Your own numbers</span></li>
+      <li data-reveal><b>Stripe</b><span>Agents pay you directly</span></li>
+      <li data-reveal><b>Google Calendar</b><span>Appointments, booked</span></li>
+      <li data-reveal><b>Meta Ads</b><span>Spend matched to calls</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 2 · Statement ============ -->
+<section class="statement">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Why inbound</p>
+    <p class="statement__text" id="statement">A lead is a name on a list. A call is a person on the line, right now, ready to talk. The only question is who picks up.</p>
+    <figure class="statement__img" data-photo>
+      <img src="assets/img/photos/caller.jpg" alt="An older man on the phone at his table, a notebook open in front of him" loading="lazy">
+      <figcaption class="statement__cap"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span><span><b>Incoming call</b> · Final expense · Tampa, FL</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 3 · How a call moves ============ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-split>How a call <em>moves.</em></h2>
+      <p class="lede" data-reveal>No queues, no round-robin, no guessing. Each call goes to everyone who can take it, at the same moment.</p>
+    </div>
+
+    <div class="how__body">
+      <ol class="steps" id="steps" role="tablist" aria-label="How a call moves">
+        <li><button class="step is-active" role="tab" aria-selected="true" data-i="0">
+          <span class="step__n mono">01</span>
+          <span class="step__main"><span class="step__t">It rings on your number</span>
+          <span class="step__d">Calls arrive on your own Twilio numbers, from your adverts and vendors. We read the caller’s state as it rings.</span></span>
+          <span class="step__bar"><i></i></span></button></li>
+        <li><button class="step" role="tab" aria-selected="false" data-i="1">
+          <span class="step__n mono">02</span>
+          <span class="step__main"><span class="step__t">We check who can take it</span>
+          <span class="step__d">Licensed in that state, marked available, subscription active, wallet covered. Everyone else is skipped, quietly.</span></span>
+          <span class="step__bar"><i></i></span></button></li>
+        <li><button class="step" role="tab" aria-selected="false" data-i="2">
+          <span class="step__n mono">03</span>
+          <span class="step__main"><span class="step__t">Everyone eligible sees it at once</span>
+          <span class="step__d">The first to accept is put straight through. Nobody free within 40 seconds? It becomes a callback request.</span></span>
+          <span class="step__bar"><i></i></span></button></li>
+        <li><button class="step" role="tab" aria-selected="false" data-i="3">
+          <span class="step__n mono">04</span>
+          <span class="step__main"><span class="step__t">Every cent is itemised</span>
+          <span class="step__d">Recorded on both sides, outcome logged, and the charge written against the call it came from.</span></span>
+          <span class="step__bar"><i></i></span></button></li>
+      </ol>
+
+      <div class="frame" data-frame>
+        <div class="frame__bar">
+          <span data-logo="mark" class="frame__mark"></span>
+          <span class="frame__crumb">Lakeshore Senior Benefits <span>/</span> <b id="frameCrumb">Numbers</b></span>
+          <span class="frame__live"><span class="live-dot"></span> Routing on</span>
+        </div>
+
+        <div class="frame__views">
+          <!-- 01 Numbers -->
+          <div class="fv is-active" data-view="0">
+            <div class="fv__head"><span class="fv__title">Your numbers</span><span class="fv__sub mono">4 lines · 3 products</span></div>
+            <div class="nrow nrow--h"><span>Number</span><span>Source</span><span class="nrow__prod">Product</span><span class="nrow__today">Today</span><span class="nrow__state">Status</span></div>
+            <div class="nrow nrow--ring">
+              <span class="nrow__num mono">(813) •••-••10</span>
+              <span class="nrow__src">Meta Ads · FL Seniors</span>
+              <span class="nrow__prod">Final expense</span>
+              <span class="nrow__today mono">38</span>
+              <span class="nrow__state"><span class="pill pill--blue"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span> Ringing · Tampa</span></span>
+            </div>
+            <div class="nrow">
+              <span class="nrow__num mono">(614) •••-••32</span>
+              <span class="nrow__src">Call vendor · T65 list</span>
+              <span class="nrow__prod">Medicare</span>
+              <span class="nrow__today mono">21</span>
+              <span class="nrow__state"><span class="pill pill--green">On a call</span></span>
+            </div>
+            <div class="nrow">
+              <span class="nrow__num mono">(480) •••-••58</span>
+              <span class="nrow__src">Google Ads · Burial cover</span>
+              <span class="nrow__prod">Final expense</span>
+              <span class="nrow__today mono">17</span>
+              <span class="nrow__state"><span class="nrow__idle">Idle</span></span>
+            </div>
+            <div class="nrow">
+              <span class="nrow__num mono">(352) •••-••71</span>
+              <span class="nrow__src">Referral line</span>
+              <span class="nrow__prod">Life</span>
+              <span class="nrow__today mono">4</span>
+              <span class="nrow__state"><span class="nrow__idle">Idle</span></span>
+            </div>
+            <div class="fv__foot"><span class="mono">STATE DETECTED</span><span class="st">FL</span><span class="fv__arrow">→</span><span>Final expense routing</span></div>
+          </div>
+
+          <!-- 02 Eligibility -->
+          <div class="fv" data-view="1">
+            <div class="fv__head"><span class="fv__title">Who can take a Florida call</span><span class="fv__sub mono">checked in 0.2s</span></div>
+            <div class="elig">
+              <div class="elig__h"><span>Agent</span><span>Licensed FL</span><span>Available</span><span>Wallet</span></div>
+              <div class="elig__r"><span><i class="av">DW</i>Dana Whitfield</span><span class="ok"></span><span class="ok"></span><span class="ok"></span></div>
+              <div class="elig__r"><span><i class="av">MR</i>Marcus Reed</span><span class="ok"></span><span class="ok"></span><span class="ok"></span></div>
+              <div class="elig__r is-out"><span><i class="av">LC</i>Lena Castillo</span><span class="no"></span><span class="ok"></span><span class="ok"></span></div>
+              <div class="elig__r"><span><i class="av">KO</i>Kwame Osei</span><span class="ok"></span><span class="ok"></span><span class="ok"></span></div>
+              <div class="elig__r is-out"><span><i class="av">TB</i>Tom Brennan</span><span class="ok"></span><span class="no"></span><span class="ok"></span></div>
+              <div class="elig__r"><span><i class="av">PN</i>Priya Natarajan</span><span class="ok"></span><span class="ok"></span><span class="ok"></span></div>
+              <div class="elig__r is-out"><span><i class="av">SH</i>Sam Holloway</span><span class="ok"></span><span class="ok"></span><span class="no"></span></div>
+            </div>
+            <div class="fv__foot"><b>6 of 14</b> agents eligible <span class="fv__arrow">→</span> offered together</div>
+          </div>
+
+          <!-- 03 Offer -->
+          <div class="fv" data-view="2">
+            <div class="fv__head"><span class="fv__title">Offered at the same moment</span><span class="fv__sub mono">40s to accept</span></div>
+            <div class="offer">
+              <div class="oc is-win"><i class="av">DW</i><span class="oc__n">Dana W.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Accepted · 2.8s</span></span><span class="oc__t"><i></i></span></div>
+              <div class="oc"><i class="av">MR</i><span class="oc__n">Marcus R.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Taken</span></span><span class="oc__t"><i></i></span></div>
+              <div class="oc"><i class="av">KO</i><span class="oc__n">Kwame O.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Taken</span></span><span class="oc__t"><i></i></span></div>
+              <div class="oc"><i class="av">PN</i><span class="oc__n">Priya N.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Taken</span></span><span class="oc__t"><i></i></span></div>
+              <div class="oc"><i class="av">AL</i><span class="oc__n">Ava L.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Taken</span></span><span class="oc__t"><i></i></span></div>
+              <div class="oc"><i class="av">JB</i><span class="oc__n">Jordan B.</span><span class="oc__s"><span class="oc__wait">Incoming · FL</span><span class="oc__done">Taken</span></span><span class="oc__t"><i></i></span></div>
+            </div>
+            <div class="fv__foot"><span class="pill pill--green">Connected</span> Dana Whitfield · Margaret E. · Tampa, FL</div>
+          </div>
+
+          <!-- 04 Record -->
+          <div class="fv" data-view="3">
+            <div class="fv__head"><span class="fv__title">Margaret E. · Tampa, FL</span><span class="fv__sub mono">IS-24021 · 4:12</span></div>
+            <div class="rec">
+              <button class="rec__play" aria-label="Recording preview"><svg viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg></button>
+              <div class="wave rec__wave" id="recWave"></div>
+              <span class="mono rec__t">4:12</span>
+            </div>
+            <ul class="tl">
+              <li><span class="mono">2:14:07</span>Offered to 6 licensed agents</li>
+              <li><span class="mono">2:14:10</span>Dana Whitfield accepted · 2.8s</li>
+              <li><span class="mono">2:18:22</span>Outcome: <span class="pill pill--blue no-dot">Appointment · Thu 2:30 pm</span> <em>added to Google Calendar</em></li>
+            </ul>
+            <div class="items">
+              <div class="items__r"><span>Acceptance plan · 60s <em>agent → your agency</em></span><span class="mono">$35.00</span></div>
+              <div class="items__r"><span>Connection fee <em>your agency → Inbound Select</em></span><span class="mono">$2.50</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="how__more" data-reveal><a href="how-it-works.html" class="link-u">Every step, in detail <span aria-hidden="true">→</span></a><a href="app.html" class="link-u">Open the agency console <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- ============ 4 · Two sides ============ -->
+<section class="sides" id="sides">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-split>Built for both ends <br>of the <em>line.</em></h2>
+      <p class="lede" data-reveal>Two sides of the same call, each with exactly what they need, and nothing they don’t.</p>
+    </div>
+
+    <div class="sides__grid">
+      <article class="side">
+        <figure class="side__img" data-photo><img src="assets/img/photos/owner.jpg" alt="An agency owner working through paperwork at his desk" loading="lazy"></figure>
+        <div class="side__body" data-reveal-group>
+          <p class="eyebrow" data-reveal>For agency owners</p>
+          <h3 class="side__t" data-reveal>Control, without the spreadsheets.</h3>
+          <ul class="ticks">
+            <li data-reveal>Bring your own Twilio numbers, adverts and call vendors.</li>
+            <li data-reveal>Set what agents pay: a monthly amount, a per-call plan, or both.</li>
+            <li data-reveal>Agent payments land in your own Stripe account.</li>
+          </ul>
+          <p class="side__more" data-reveal><a href="agencies.html" class="link-u">For agencies <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+
+      <article class="side side--b">
+        <figure class="side__img" data-photo><img src="assets/img/photos/agent-2.jpg" alt="A licensed agent in a headset, mid-conversation at her laptop" loading="lazy"></figure>
+        <div class="side__body" data-reveal-group>
+          <p class="eyebrow" data-reveal>For licensed agents</p>
+          <h3 class="side__t" data-reveal>Conversations, not cold lists.</h3>
+          <ul class="ticks">
+            <li data-reveal>Only calls from states you’re licensed in.</li>
+            <li data-reveal>Charged only when a call reaches your plan’s length.</li>
+            <li data-reveal>Appointments go straight into Google Calendar.</li>
+          </ul>
+          <p class="side__more" data-reveal><a href="agents.html" class="link-u">For agents <span aria-hidden="true">→</span></a></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · The rules (the one dark band) ============ -->
+<section class="rules on-dark" id="rules">
+  <div class="rules__panel" id="rulesPanel" data-settle>
+    <div class="wrap">
+      <div class="sec-head sec-head--dark">
+        <h2 class="h2" data-split>The rules, in <em>plain numbers.</em></h2>
+        <p class="lede" data-reveal>No small print to decode. These are the numbers the system runs on, for every agency.</p>
+      </div>
+      <dl class="nums" data-reveal-group>
+        <div class="num" data-reveal><dt class="num__v"><span data-count="40">40</span><small>s</small></dt><dd>for an eligible agent to accept, before the caller is offered a callback.</dd></div>
+        <div class="num" data-reveal><dt class="num__v"><span data-count="15">15</span><small>s</small></dt><dd>before a call counts as connected. Anything shorter costs your agency nothing.</dd></div>
+        <div class="num" data-reveal><dt class="num__v"><span data-count="48">48</span><small>h</small></dt><dd>for an agent to request a refund on any charged call. You review it.</dd></div>
+        <div class="num" data-reveal><dt class="num__v"><span data-count="0">0</span><small>%</small></dt><dd>taken from what your agents pay you. That money is yours.</dd></div>
+      </dl>
+      <p class="rules__more" data-reveal><a href="trust.html" class="link-u">How we handle money and calls <span aria-hidden="true">→</span></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · Callback Requests ============ -->
+<section class="cb" id="callbacks">
+  <div class="wrap cb__grid">
+    <div class="cb__copy">
+      <p class="eyebrow" data-reveal>Callback Requests</p>
+      <h2 class="h2" data-split>A missed call is not <br>a <em>lost call.</em></h2>
+      <p class="lede" data-reveal>When nobody is free, the caller leaves a message. It becomes a Callback Request your agents can pick up, priced by how fresh it is. The sale stays inside your agency.</p>
+      <dl class="cb__facts" data-reveal-group>
+        <div data-reveal><dt>75%</dt><dd>of every sale stays with your agency</dd></div>
+        <div data-reveal><dt>90 days</dt><dd>on the board, then it comes off</dd></div>
+      </dl>
+      <p class="side__more" data-reveal><a href="callback-requests.html" class="link-u">How Callback Requests work <span aria-hidden="true">→</span></a></p>
+    </div>
+
+    <div class="cb__stage" data-stage>
+      <div class="vm-stack">
+        <article class="vm vm--ghost vm--g2" aria-hidden="true"></article>
+        <article class="vm vm--ghost vm--g1" aria-hidden="true"></article>
+        <article class="vm" id="vm">
+          <header class="vm__head">
+            <span class="pill pill--amber">Callback Request</span>
+            <span class="vm__age mono">0–7 days</span>
+          </header>
+          <h3 class="vm__who">Columbus, OH</h3>
+          <p class="vm__meta">Medicare · rang at 6:52 pm · nobody free</p>
+          <div class="vm__player">
+            <button class="vm__play vm-play" id="vmPlay" aria-label="Play voicemail preview">
+              <svg class="i-play" viewBox="0 0 16 16"><path d="M5 3.5v9l7.5-4.5z" fill="currentColor"/></svg>
+              <svg class="i-pause" viewBox="0 0 16 16"><path d="M4.5 3.5h2.5v9H4.5zM9 3.5h2.5v9H9z" fill="currentColor"/></svg>
+            </button>
+            <div class="wave vm__wave" id="vmWave"></div>
+            <span class="mono vm__t vm-time" id="vmT">0:38</span>
+          </div>
+          <blockquote class="vm__quote">“Hi, I saw your advert about Medicare plans. I turn sixty-five in March and I’m not sure where to start…”</blockquote>
+          <footer class="vm__foot">
+            <span class="vm__price"><b class="mono">$25.00</b> <span>with recording</span></span>
+            <button class="btn btn--sm vm__buy" id="vmBuy"><span class="vm__buy-a">Take this callback</span><span class="vm__buy-b">Yours · call back now</span></button>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 · Pricing ============ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="h2" data-split>Priced like everything <br>else: <em>itemised.</em></h2>
+      <p class="lede" data-reveal>Month to month. Your agents pay you, at prices you set. We charge your agency for the platform and for calls that actually connect.</p>
+    </div>
+
+    <div class="plans" data-reveal-group>
+      <article class="plan" data-reveal>
+        <header><h3 class="plan__name">Agency</h3><p class="plan__for">Everything you need to run inbound calls.</p></header>
+        <p class="plan__price"><span class="plan__cur">$</span><span class="plan__amt">499</span><span class="plan__per">/ month</span></p>
+        <ul class="plan__list">
+          <li><span>Agents included</span><b>10</b></li>
+          <li><span>Agents 11–50</span><b>$15 each / month</b></li>
+          <li><span>Agents beyond 50</span><b>Free</b></li>
+          <li><span>Per connected call (15s+)</span><b>$2.50</b></li>
+        </ul>
+        <a href="demo.html" class="btn btn--ghost plan__btn">Book a demo</a>
+      </article>
+
+      <article class="plan plan--brand" data-reveal>
+        <header><h3 class="plan__name">Agency with your own brand</h3><p class="plan__for">The same platform, under your own name.</p></header>
+        <p class="plan__price"><span class="plan__cur">$</span><span class="plan__amt">699</span><span class="plan__per">/ month</span></p>
+        <ul class="plan__list">
+          <li><span>Everything in Agency</span><b>Included</b></li>
+          <li><span>Your name and colours</span><b>Included</b></li>
+          <li><span>Your own web address</span><b>Included</b></li>
+          <li><span>Per connected call (15s+)</span><b>$2.50</b></li>
+        </ul>
+        <a href="demo.html" class="btn plan__btn">Book a demo
+          <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+    </div>
+    <p class="pricing__fine" data-reveal>Connection fees are collected once they reach $100, or every Monday. No annual contract. <a href="pricing.html" class="link-u">Full pricing <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- ============ 8 · Close ============ -->
+<section class="close" id="book">
+  <div class="wrap close__in">
+    <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <h2 class="display close__t" data-split>Hear it ring on your <br><em class="accent">own numbers.</em></h2>
+    <p class="lede" data-reveal>A thirty-minute walkthrough with your states, your products and your prices.</p>
+    <div class="close__actions" data-reveal>
+      <a href="demo.html" class="btn">Book a demo
+        <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="app.html" class="btn btn--ghost">See the product</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

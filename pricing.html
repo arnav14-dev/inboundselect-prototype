@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="pricing">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pricing — Inbound Select</title>
+<meta name="description" content="One price for the platform, $2.50 for calls that actually connect, and nothing taken from what your agents pay you. Month to month.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-pricing.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Hero + 2 · Plans ============ -->
+  <section class="phero pr-hero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div>
+          <p class="eyebrow" data-hero>Pricing</p>
+          <h1 class="display phero__title" data-split="hero">Two plans. <br><em class="accent">Month to month.</em></h1>
+        </div>
+        <div>
+          <p class="lede phero__lede" data-hero>One price for the platform, a small fee for calls that actually connect, and nothing taken from what your agents pay you. Add your own brand whenever you like.</p>
+          <div class="phero__actions" data-hero>
+            <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="#estimate" class="btn btn--ghost">Estimate a month</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="phero__media pr-plans" data-hero-media>
+        <div class="plans">
+          <article class="plan">
+            <header><h2 class="plan__name">Agency</h2><p class="plan__for">The full platform for running your inbound calls.</p></header>
+            <p class="plan__price"><span class="plan__cur">$</span><span class="plan__amt">499</span><span class="plan__per">/ month</span></p>
+            <ul class="plan__list">
+              <li><span>Agents included</span><b>10</b></li>
+              <li><span>Agents 11–50</span><b>$15 each / month</b></li>
+              <li><span>Agents beyond 50</span><b>Free</b></li>
+              <li><span>Per connected call (15s+)</span><b>$2.50</b></li>
+            </ul>
+            <a href="demo.html" class="btn btn--ghost plan__btn">Book a demo</a>
+          </article>
+
+          <article class="plan plan--brand">
+            <header><h2 class="plan__name">Agency with your own brand</h2><p class="plan__for">The same platform, under your name.</p></header>
+            <p class="plan__price"><span class="plan__cur">$</span><span class="plan__amt">699</span><span class="plan__per">/ month</span></p>
+            <ul class="plan__list">
+              <li><span>Everything in Agency</span><b>Included</b></li>
+              <li><span>Your name and colours</span><b>Included</b></li>
+              <li><span>Your own web address</span><b>Included</b></li>
+              <li><span>Per connected call (15s+)</span><b>$2.50</b></li>
+            </ul>
+            <a href="demo.html" class="btn plan__btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          </article>
+        </div>
+        <p class="pr-plans__fine">Both plans are month to month, in US dollars. Nothing is taken from what your agents pay you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · Estimator ============ -->
+  <section class="sec est-sec" id="estimate">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>What would a <br><em class="nw">month cost?</em></h2>
+        <p class="lede" data-reveal>Set your agent count and the calls you expect to connect. Each line is worked out the way your invoice is.</p>
+      </div>
+
+      <div class="est">
+        <div class="est__controls" data-reveal>
+          <div class="ctl">
+            <div class="ctl__top">
+              <label class="ctl__l" for="estAgents">Agents on your team<span>Licensed agents with a seat</span></label>
+              <output class="ctl__v" for="estAgents" id="agentsOut">24</output>
+            </div>
+            <input type="range" class="range" id="estAgents" min="1" max="80" step="1" value="24" aria-describedby="agentsScale">
+            <div class="ctl__scale" id="agentsScale" aria-hidden="true">
+              <span style="--p:0">1</span>
+              <span class="is-mark" style="--p:.1139">10</span>
+              <span class="is-mark" style="--p:.6203">50</span>
+              <span style="--p:1">80</span>
+            </div>
+          </div>
+
+          <div class="ctl">
+            <div class="ctl__top">
+              <label class="ctl__l" for="estCalls">Connected calls a month<span>Calls with 15 seconds or more of talk</span></label>
+              <output class="ctl__v" for="estCalls" id="callsOut">600</output>
+            </div>
+            <input type="range" class="range" id="estCalls" min="0" max="3000" step="50" value="600">
+            <div class="ctl__scale" aria-hidden="true">
+              <span style="--p:0">0</span>
+              <span style="--p:.3333">1,000</span>
+              <span style="--p:.6667">2,000</span>
+              <span style="--p:1">3,000</span>
+            </div>
+          </div>
+
+          <label class="tog">
+            <input type="checkbox" class="tog__in" id="estBrand">
+            <span class="tog__txt"><b>Your own brand</b><span>Your name, colours and web address · <span class="nw">+$200 a month</span></span></span>
+            <span class="tog__sw" aria-hidden="true"></span>
+          </label>
+        </div>
+
+        <div class="est__stage stage-panel dots" data-reveal>
+          <div class="rcpt" id="rcpt">
+            <div class="rcpt__paper">
+              <header class="rcpt__head">
+                <div>
+                  <p class="rcpt__t">Estimate</p>
+                  <p class="rcpt__plan"><span id="rPlan">Agency plan</span></p>
+                </div>
+                <p class="rcpt__meta mono">Monthly<br>USD</p>
+              </header>
+
+              <ol class="rcpt__items" aria-live="polite">
+                <li class="ri" id="riPlatform">
+                  <span class="ri__l">Platform<em id="rPlatformD">Agency · 10 agents included</em></span>
+                  <span class="ri__v mono" id="rPlatform">$499.00</span>
+                </li>
+                <li class="ri" id="riTier">
+                  <span class="ri__l">Agents 11–50<em id="rTierD">14 × $15</em></span>
+                  <span class="ri__v mono" id="rTier">$210.00</span>
+                </li>
+                <li class="ri" id="riBeyond">
+                  <span class="ri__l">Agents beyond 50<em id="rBeyondD">None yet · free</em></span>
+                  <span class="ri__v mono" id="rBeyond">$0.00</span>
+                </li>
+                <li class="ri" id="riCalls">
+                  <span class="ri__l">Connected calls<em id="rCallsD">600 × $2.50</em></span>
+                  <span class="ri__v mono" id="rCalls">$1,500.00</span>
+                </li>
+              </ol>
+
+              <div class="rcpt__tear" aria-hidden="true"></div>
+
+              <div class="rcpt__total">
+                <span class="rcpt__tl">Estimated month</span>
+                <span class="rcpt__tv"><span class="rcpt__cur">$</span><span id="rTotal">2,209</span><span class="rcpt__cents">.00</span></span>
+              </div>
+            </div>
+          </div>
+          <p class="est__note">Estimate only. What your agents pay you isn’t included; that money is yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4 · What your agents pay you ============ -->
+  <section class="sec sec--flush">
+    <div class="wrap split">
+      <div class="split__copy">
+        <p class="eyebrow" data-reveal>Your side of the money</p>
+        <h2 class="h2" data-split>What your agents <br><em class="nw">pay you.</em></h2>
+        <p class="lede" data-reveal>You set it: a monthly amount, a per-call acceptance plan, or both. Agent payments go to your own Stripe account, and Inbound Select takes nothing from them.</p>
+        <ul class="ticks">
+          <li data-reveal>An agent is charged only when talk time reaches the plan’s seconds.</li>
+          <li data-reveal>The caller’s number stays hidden until the call is billed.</li>
+          <li data-reveal>Agents can ask for a refund within 48 hours. You review every request.</li>
+        </ul>
+      </div>
+
+      <article class="ap" data-reveal aria-label="Example acceptance plans">
+        <header class="ap__head">
+          <h3 class="ap__t">Acceptance plans</h3>
+          <p class="ap__cap">Example. Your agency sets these.</p>
+        </header>
+        <div class="ap__h"><span>Talk time reaches</span><span>Agent pays you</span></div>
+        <div class="ap__r">
+          <span class="ap__s"><b class="mono">30s</b><span class="ap__bar"><i style="--w:.3333"></i></span></span>
+          <span class="ap__p mono">$20.00</span>
+        </div>
+        <div class="ap__r">
+          <span class="ap__s"><b class="mono">60s</b><span class="ap__bar"><i style="--w:.6667"></i></span></span>
+          <span class="ap__p mono">$35.00</span>
+        </div>
+        <div class="ap__r">
+          <span class="ap__s"><b class="mono">90s</b><span class="ap__bar"><i style="--w:1"></i></span></span>
+          <span class="ap__p mono">$45.00</span>
+        </div>
+        <p class="ap__foot">Shorter than the plan? No charge. The agent can still recover the contact for the plan price until midnight.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 5 · How billing works (the one dark band) ============ -->
+  <section class="pr-bill on-dark">
+    <div class="pr-bill__panel" data-settle>
+      <div class="wrap">
+        <div class="sec-head sec-head--dark">
+          <h2 class="h2" data-split>How billing <em>works.</em></h2>
+          <p class="lede" data-reveal>Four rules, in the order you’ll meet them. Nothing else is tucked between them.</p>
+        </div>
+        <div class="rows rows--dark">
+          <div class="row" data-reveal><span class="row__n">01</span><h3 class="row__t">Charged on approval</h3><p class="row__d">We take your card when you apply, and charge it only once your agency is approved.</p></div>
+          <div class="row" data-reveal><span class="row__n">02</span><h3 class="row__t">Fees at $100, or Monday</h3><p class="row__d">Connection fees build up as calls connect. We collect them once they reach $100, or every Monday.</p></div>
+          <div class="row" data-reveal><span class="row__n">03</span><h3 class="row__t">Month to month</h3><p class="row__d">There is no annual contract. Each month is billed on its own.</p></div>
+          <div class="row" data-reveal><span class="row__n">04</span><h3 class="row__t">Callback sales, 75 / 25</h3><p class="row__d">When an agent buys a Callback Request, 75% of the sale goes to your agency and 25% to the platform. The sale stays inside your agency.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6 · FAQ ============ -->
+  <section class="sec pr-faq">
+    <div class="wrap pq">
+      <div class="pq__head">
+        <h2 class="h2" data-split>Questions, <em>answered.</em></h2>
+        <p data-reveal>Something else? Write to <a href="mailto:support@inboundselect.com" class="link-u">support@inboundselect.com</a></p>
+      </div>
+      <div class="faq" data-reveal>
+        <details><summary>What counts as a connected call?</summary><div class="faq__a"><div><p>A call with 15 seconds or more of talk time. Only connected calls carry the $2.50 fee.</p></div></div></details>
+        <details><summary>Do agents pay Inbound Select anything?</summary><div class="faq__a"><div><p>No. Agents pay your agency, at prices you set, into your own Stripe account. We take nothing from those payments.</p></div></div></details>
+        <details><summary>Can I add my own brand later?</summary><div class="faq__a"><div><p>Yes. Both plans are month to month, so you can move to Agency with your own brand when you’re ready to put your name, colours and web address on it.</p></div></div></details>
+        <details><summary>What if a call is shorter than 15 seconds?</summary><div class="faq__a"><div><p>There’s no connection fee. A call only counts as connected once it reaches 15 seconds of talk.</p></div></div></details>
+        <details><summary>Do agents beyond 50 cost anything?</summary><div class="faq__a"><div><p>No. Agents 11 to 50 are $15 each per month. From the 51st agent on, there is no per-agent charge.</p></div></div></details>
+        <details><summary>Is there an annual plan?</summary><div class="faq__a"><div><p>No. Both plans are month to month, with no annual contract.</p></div></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7 · Close ============ -->
+  <section class="close">
+    <div class="wrap close__in">
+      <span class="sig close__sig" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <h2 class="display close__t" data-split>See your month, <br><em class="accent">to the cent.</em></h2>
+      <p class="lede" data-reveal>Thirty minutes with your agent count, your states and your prices. We’ll price your month line by line.</p>
+      <div class="close__actions" data-reveal>
+        <a href="demo.html" class="btn">Book a demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="app.html" class="btn btn--ghost">See the product</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-pricing.js"></script>
+</body>
+</html>

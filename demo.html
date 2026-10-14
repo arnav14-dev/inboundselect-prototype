@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB" class="no-js" data-page="demo">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a demo — Inbound Select</title>
+<meta name="description" content="Thirty minutes with the Inbound Select team, using your own products, states and prices. See exactly how your calls would route.">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="icon" href="assets/img/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/p-demo.css">
+<script src="assets/js/head.js"></script>
+<script src="assets/js/brand.js"></script>
+</head>
+<body>
+<script src="assets/js/chrome.js"></script>
+
+<main id="main">
+
+  <!-- ============ 1 · Compact hero ============ -->
+  <section class="phero dm-hero">
+    <div class="wrap">
+      <div class="phero__grid">
+        <div>
+          <p class="eyebrow" data-hero>Book a demo</p>
+          <h1 class="display phero__title" data-split="hero">See it with <br class="br-m">your own <br><em class="accent">states and prices.</em></h1>
+        </div>
+        <div>
+          <p class="lede phero__lede" data-hero>Thirty minutes with our team. Bring your products, the states your agents are licensed in and what you’d charge them. We’ll show you exactly how your calls would route.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2 · Form + slot picker ============ -->
+  <section class="dm-book" id="book">
+    <div class="wrap">
+      <div class="bk" id="bk" data-hero-media>
+
+        <form class="bk__form" id="bkForm" novalidate>
+          <div class="bk__fields">
+
+            <fieldset class="fs">
+              <legend class="fs__l"><span class="fs__n">01</span>About you</legend>
+              <div class="fs__grid">
+                <div class="field" data-f="name">
+                  <label for="fName">Your name</label>
+                  <input class="input" id="fName" name="name" type="text" autocomplete="name" placeholder="Rachel Moreno" aria-describedby="mName">
+                  <p class="field__msg" id="mName" aria-live="polite"><span></span></p>
+                </div>
+                <div class="field" data-f="agency">
+                  <label for="fAgency">Agency name</label>
+                  <input class="input" id="fAgency" name="agency" type="text" autocomplete="organization" placeholder="Lakeshore Senior Benefits" aria-describedby="mAgency">
+                  <p class="field__msg" id="mAgency" aria-live="polite"><span></span></p>
+                </div>
+                <div class="field" data-f="email">
+                  <label for="fEmail">Work email</label>
+                  <input class="input" id="fEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@youragency.com" aria-describedby="mEmail">
+                  <p class="field__msg" id="mEmail" aria-live="polite"><span></span></p>
+                </div>
+                <div class="field" data-f="phone">
+                  <label for="fPhone">Phone</label>
+                  <input class="input" id="fPhone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Best number for the call" aria-describedby="mPhone">
+                  <p class="field__msg" id="mPhone" aria-live="polite"><span></span></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fs">
+              <legend class="fs__l"><span class="fs__n">02</span>Your agency</legend>
+              <div class="fs__stack">
+                <div class="field" data-f="agents">
+                  <span class="field__l" id="lAgents">Number of agents</span>
+                  <div class="chips" role="group" aria-labelledby="lAgents" data-single id="cAgents">
+                    <button type="button" class="chip" aria-pressed="false" data-v="1–10">1–10</button>
+                    <button type="button" class="chip" aria-pressed="false" data-v="11–25">11–25</button>
+                    <button type="button" class="chip" aria-pressed="false" data-v="26–50">26–50</button>
+                    <button type="button" class="chip" aria-pressed="false" data-v="50+">50+</button>
+                  </div>
+                  <p class="field__msg" id="mAgents" aria-live="polite"><span></span></p>
+                </div>
+                <div class="field" data-f="products">
+                  <span class="field__l" id="lProducts">Products <span class="field__opt">Pick any that apply</span></span>
+                  <div class="chips" role="group" aria-labelledby="lProducts" id="cProducts">
+                    <button type="button" class="chip chip--check" aria-pressed="false" data-v="Final expense">Final expense</button>
+                    <button type="button" class="chip chip--check" aria-pressed="false" data-v="Medicare">Medicare</button>
+                    <button type="button" class="chip chip--check" aria-pressed="false" data-v="Life">Life</button>
+                  </div>
+                  <p class="field__msg" id="mProducts" aria-live="polite"><span></span></p>
+                </div>
+                <div class="field" data-f="states">
+                  <label for="fStates">States your agents are licensed in</label>
+                  <input class="input" id="fStates" name="states" type="text" autocomplete="off" spellcheck="false" placeholder="FL, GA, OH" aria-describedby="hStates mStates">
+                  <p class="field__hint" id="hStates"><span id="statesHint">Two-letter codes or full names, separated by commas.</span><span class="sts" id="statesPrev" aria-hidden="true"></span></p>
+                  <p class="field__msg" id="mStates" aria-live="polite"><span></span></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fs">
+              <legend class="fs__l"><span class="fs__n">03</span>Anything else</legend>
+              <div class="field" data-f="notes">
+                <label for="fNotes">Notes <span class="field__opt">Optional</span></label>
+                <textarea class="input" id="fNotes" name="notes" rows="4" placeholder="Your call sources, how you pay agents today, anything you’d like us to cover."></textarea>
+              </div>
+            </fieldset>
+          </div>
+
+          <aside class="slot" aria-labelledby="slotT">
+            <div class="slot__card">
+              <header class="slot__head">
+                <div>
+                  <h2 class="slot__t" id="slotT">Pick a time</h2>
+                  <p class="slot__m" id="slotMonth">October 2026</p>
+                </div>
+                <span class="slot__tz mono">Times in ET</span>
+              </header>
+
+              <div class="days" id="days" role="group" aria-label="Day"></div>
+              <p class="slot__day" id="dayLabel" aria-live="polite"></p>
+              <div class="times" id="times" role="group" aria-label="Time, Eastern"></div>
+
+              <footer class="slot__foot">
+                <div class="slot__sum">
+                  <span class="slot__l mono">Your demo</span>
+                  <span class="slot__s" id="slotSum" aria-live="polite">Pick a day and time</span>
+                </div>
+                <p class="field__msg slot__msg" id="mSlot" aria-live="polite"><span></span></p>
+                <button type="submit" class="btn slot__btn" id="bkSubmit">
+                  <span class="slot__btn-a">Book the demo <svg class="arr" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+                  <span class="slot__btn-b" aria-hidden="true"><span class="sig sig--ring"><i></i><i></i><i></i><i></i></span>Booking…</span>
+                </button>
+              </footer>
+            </div>
+          </aside>
+        </form>
+
+        <div class="done stage-panel dots" id="bkDone" hidden tabindex="-1" aria-live="polite">
+          <div class="done__card">
+            <svg class="done__check" viewBox="0 0 72 72" aria-hidden="true"><circle cx="36" cy="36" r="34"/><path d="M23.5 37.5l8.5 8.5 17-19"/></svg>
+            <h2 class="display done__t">You’re booked. <br><em class="accent done__when" id="doneWhen">Thu 15 Oct, <span class="nw">2:30 pm ET.</span></em></h2>
+            <p class="done__l">Thirty minutes with our team. We’ll have your states and products in front of us when we start.</p>
+            <dl class="done__recap">
+              <div><dt>Agency</dt><dd id="dAgency">Lakeshore Senior Benefits</dd></div>
+              <div><dt>Agents</dt><dd id="dAgents">11–25</dd></div>
+              <div><dt>Products</dt><dd id="dProducts">Final expense</dd></div>
+              <div><dt>States</dt><dd id="dStates">FL</dd></div>
+            </dl>
+            <div class="done__actions">
+              <a class="btn btn--ghost btn--sm" id="doneCal" href="#" download="inbound-select-demo.ics">Add to calendar</a>
+              <button type="button" class="done__edit link-u" id="doneEdit">Change the time</button>
+            </div>
+            <p class="done__proto">Prototype: nothing was sent.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3 · What happens on the call ============ -->
+  <section class="sec dm-call">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="h2" data-split>What happens <br><em class="nw">on the call.</em></h2>
+        <p class="lede" data-reveal>Thirty minutes in three parts. You leave knowing how your calls would route and what a month would cost.</p>
+      </div>
+      <div class="rows">
+        <div class="row" data-reveal><span class="row__n">01</span><h3 class="row__t">We map your states and products</h3><p class="row__d">Tell us where your agents are licensed and what they sell. We’ll show how a Florida final expense call reaches only the agents who can take it.</p></div>
+        <div class="row" data-reveal><span class="row__n">02</span><h3 class="row__t">We route a test call to you, live</h3><p class="row__d">A call rings, gets offered and connects while you watch it in the console. You accept it yourself, the way an agent would.</p></div>
+        <div class="row" data-reveal><span class="row__n">03</span><h3 class="row__t">We walk through billing to the cent</h3><p class="row__d">Your platform price, your agent count, connection fees, and what you’d charge agents. Every line, before you decide anything.</p></div>
+      </div>
+
+      <!-- ============ 4 · Direct contact ============ -->
+      <p class="reach" data-reveal>
+        <span class="reach__l">Rather talk now?</span>
+        <a href="mailto:support@inboundselect.com" class="link-u">support@inboundselect.com</a>
+        <span class="reach__dot" aria-hidden="true">·</span>
+        <a href="tel:+17272482830" class="link-u">+1 727 248 2830</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<script>IBChrome.footer()</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/p-demo.js"></script>
+</body>
+</html>
